@@ -13,16 +13,16 @@ export default function Home() {
       </Head>
 
       <Welcome />
-      <div style={{"display":"grid", "justifyContent":"space-around"}}>
-        <div id="pro" >
+      <div style={{"display":"grid", "justifyContent":"space-around", "position": "relative", "paddingTop": "70px"}}>
+        <div id="pro" style={{"height":"500px", "paddingTop":"100px"}} >
           Projects <a href="#">#</a>
         </div>
         <Divider  />
-        <div id="exp" >
+        <div id="exp" style={{"height":"500px", "paddingTop":"100px"}}>
           Experience <a href="#">#</a>
         </div>
-        <Divider  />
-        <div id="edu">
+        <Divider />
+        <div id="edu" style={{"height":"500px", "paddingTop":"100px"}}>
           Education <a href="#">#</a>
         </div>
       </div>
