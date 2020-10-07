@@ -29,11 +29,11 @@ export default function Welcome() {
                             Experiences
                         </PseudoBox>
                         <PseudoBox color="gray.700" mb={2} >
-                            Discover my wonderful experiences .
+                            Discover my wonderful <br/>experiences .
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
-                <Box  >
+                <Box>
                     <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
                         <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
                             Education
@@ -49,7 +49,7 @@ export default function Welcome() {
                             Projects
                         </PseudoBox>
                         <PseudoBox color="gray.700" mb={2} >
-                            Discover my wonderful experiences .
+                            Discover my wonderful<br/> experiences .
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
