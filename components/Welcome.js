@@ -1,11 +1,12 @@
-import { Stack, Heading, Box, PseudoBox, SimpleGrid, Image, Text } from "@chakra-ui/core";
+import { Stack, Heading, Box, PseudoBox, SimpleGrid, Image, Text, Link } from "@chakra-ui/core";
+import { Education, Projects, Experience } from "../lib/util";
 
 
 export default function Welcome() {
     return (
         <>
             <SimpleGrid minChildWidth="120px" spacing="80px" marginBottom="40px" display="flex" justifyContent="space-around" >
-                <Box >
+                <Box>
                     <PseudoBox role="group" maxW="sm" overflow="hidden" p={12} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px">
                         <Stack spacing={8} maxWidth="700px">
                             <PseudoBox fontWeight="bold" fontSize="sm" mb={20} color="gray.900" >
@@ -23,13 +24,14 @@ export default function Welcome() {
                 </Box>
             </SimpleGrid>
             <SimpleGrid minChildWidth="120px" spacing="30px" justifyContent="center" display="flex" flexWrap="wrap">
-                <Box  >
+                <Box>
                     <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
                         <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
                             Experiences
                         </PseudoBox>
                         <PseudoBox color="gray.700" mb={2} >
-                            Discover my wonderful <br/>experiences .
+                        <Link href="#exp" color="teal.500">See more</Link>
+
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
@@ -39,17 +41,17 @@ export default function Welcome() {
                             Education
                         </PseudoBox>
                         <PseudoBox color="gray.700" mb={2}>
-                            Explore my career.
+                        <Link href="#edu" color="teal.500">See more</Link>
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
-                <Box  >
+                <Box>
                     <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
                         <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
                             Projects
                         </PseudoBox>
                         <PseudoBox color="gray.700" mb={2} >
-                            Discover my wonderful<br/> experiences .
+                            <Link href="#pro" color="teal.500">See more</Link>
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
