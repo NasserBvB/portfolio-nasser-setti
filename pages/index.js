@@ -19,7 +19,9 @@ export default function Home() {
         m="0 auto 4rem auto"
         maxWidth="700px"
       >
-        
+        <div>
+          Welcome home
+        </div>
       </Stack>
     </Container>
   )
