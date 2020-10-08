@@ -24,26 +24,17 @@ export default function Home() {
             </Badge> <Icon name="triangle-up" size="22px" color="purple.300" />
             </a>
           </Link>
-          <Projects/>
+          <Projects />
         </div>
         <div id="exp" style={{ "paddingTop": "100px" }}>
           <Link href="#">
             <a >
               <Badge variant="outline" variantColor="purple">
-                Experiences
+                Timeline
             </Badge> <Icon name="triangle-up" size="22px" color="purple.300" />
             </a>
           </Link>
 
-        </div>
-        <div id="edu" style={{ "paddingTop": "100px" }}>
-          <Link href="#">
-            <a >
-              <Badge variant="outline" variantColor="purple">
-                Education
-          </Badge> <Icon name="triangle-up" size="22px" color="purple.300" />
-            </a>
-          </Link>
         </div>
       </Flex>
 

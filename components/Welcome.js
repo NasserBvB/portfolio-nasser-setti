@@ -26,43 +26,6 @@ export default function Welcome() {
                     </PseudoBox>
                 </Box>
             </SimpleGrid>
-            <SimpleGrid minChildWidth="120px" spacing="30px" justifyContent="center" display="flex" flexWrap="wrap">
-                <Box>
-                    <Link href="#exp">
-                        <a>
-                            <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
-                                <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
-                                    Experiences
-                                </PseudoBox>
-                            </PseudoBox>
-                        </a>
-                    </Link>
-                </Box>
-                <Box>
-                    <Link href="#edu">
-                        <a>
-                            <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
-                                <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
-                                    Education
-                                </PseudoBox>
-                            </PseudoBox>
-                        </a>
-                    </Link>
-                </Box>
-                <Box>
-                    <Link href="#pro">
-                        <a>
-
-                            <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
-                                <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
-                                    Projects
-                        </PseudoBox>
-                            </PseudoBox>
-                        </a>
-                    </Link>
-
-                </Box>
-            </SimpleGrid>
         </>
     )
 }
