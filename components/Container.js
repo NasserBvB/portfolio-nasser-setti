@@ -50,16 +50,17 @@ const Container = ({ children }) => {
           onClick={toggleColorMode}
         />
         <Box>
-          <NextLink href="/about" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              About
-            </Button>
-          </NextLink>
           <NextLink href="/" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Home
             </Button>
           </NextLink>
+          <NextLink href="/about" passHref>
+            <Button as="a" variant="ghost" p={[1, 4]}>
+              About
+            </Button>
+          </NextLink>
+
         </Box>
       </StickyNav>
       <Flex

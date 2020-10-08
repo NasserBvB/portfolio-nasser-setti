@@ -1,9 +1,9 @@
 import { ThemeProvider, ColorModeProvider, useColorMode, CSSReset } from "@chakra-ui/core";
 import { Global, css } from "@emotion/core";
-import '../styles/globals.css'
 
 import { prismLightTheme, prismDarkTheme } from '../styles/prism';
 import theme from "../styles/theme";
+import '../styles/globals.css'
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
