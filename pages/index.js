@@ -17,11 +17,9 @@ export default function Home() {
         <div id="pro" style={{"height":"500px", "paddingTop":"100px"}} >
            <a href="#">Projects</a>
         </div>
-        <Divider  />
         <div id="exp" style={{"height":"500px", "paddingTop":"100px"}}>
            <a href="#">Experience</a>
         </div>
-        <Divider />
         <div id="edu" style={{"height":"500px", "paddingTop":"100px"}}>
            <a href="#">Education</a>
         </div>

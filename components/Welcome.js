@@ -1,19 +1,22 @@
-import { Stack, Heading, Box, PseudoBox, SimpleGrid, Image, Text, Link } from "@chakra-ui/core";
+import { Stack, Heading, Box, PseudoBox, SimpleGrid, Image, Text, Link, useColorMode } from "@chakra-ui/core";
 import { Education, Projects, Experience } from "../lib/util";
 
 
 export default function Welcome() {
+    const { colorMode } = useColorMode();
+    const bg = { light: "white", dark: "gray.800" };
+    const color = { light: "black", dark: "white" };
     return (
         <>
             <SimpleGrid minChildWidth="120px" spacing="80px" marginBottom="40px" display="flex" justifyContent="space-around" >
                 <Box>
-                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={12} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px">
+                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={12} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px">
                         <Stack spacing={8} maxWidth="700px">
-                            <PseudoBox fontWeight="bold" fontSize="sm" mb={20} color="gray.900" >
+                            <PseudoBox fontWeight="bold" fontSize="sm" mb={20} color={color[colorMode]} >
                                 <Image rounded="full" size="100px" src="/nasser.jpg" alt="Nasser Setti" />
-                                <Heading as="h4" size="md">Hey, I’m Nasser Setti</Heading>
+                                <Heading as="h4" size="md" color={color[colorMode]}>Hey, I’m Nasser Setti</Heading>
                             </PseudoBox>
-                            <PseudoBox color="gray.700" mb={8} >
+                            <PseudoBox color={color[colorMode]} mb={8} >
                                 <Text fontSize="lg">
                                     I’m a developer. I work at 4D as a Studies and development engineer.
                                     You’ve found my personal slice of the internet – everything you want to know and more is here.
@@ -25,32 +28,32 @@ export default function Welcome() {
             </SimpleGrid>
             <SimpleGrid minChildWidth="120px" spacing="30px" justifyContent="center" display="flex" flexWrap="wrap">
                 <Box>
-                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
-                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
+                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
+                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
                             Experiences
                         </PseudoBox>
-                        <PseudoBox color="gray.700" mb={2} >
-                        <Link href="#exp" color="teal.500">See more</Link>
+                        <PseudoBox color={color[colorMode]} mb={2} >
+                            <Link href="#exp" color="teal.500">See more</Link>
 
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
                 <Box>
-                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
-                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
+                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
+                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
                             Education
                         </PseudoBox>
-                        <PseudoBox color="gray.700" mb={2}>
-                        <Link href="#edu" color="teal.500">See more</Link>
+                        <PseudoBox color={color[colorMode]} mb={2}>
+                            <Link href="#edu" color="teal.500">See more</Link>
                         </PseudoBox>
                     </PseudoBox>
                 </Box>
                 <Box>
-                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg="white" boxShadow="md" borderRadius="50px" >
-                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color="gray.900" >
+                    <PseudoBox role="group" maxW="sm" overflow="hidden" p={8} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px" >
+                        <PseudoBox fontWeight="bold" fontSize="lg" mb={1} color={color[colorMode]} >
                             Projects
                         </PseudoBox>
-                        <PseudoBox color="gray.700" mb={2} >
+                        <PseudoBox color={color[colorMode]} mb={2} >
                             <Link href="#pro" color="teal.500">See more</Link>
                         </PseudoBox>
                     </PseudoBox>
