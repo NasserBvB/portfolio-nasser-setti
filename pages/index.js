@@ -15,24 +15,20 @@ export default function Home() {
       </Head>
 
       <Welcome />
-      <Flex align="center" mb={8} direction="column">
+      <Flex alignContent="space-around" display="flex" mb={8} direction="column">
         <div id="pro" style={{ "paddingTop": "100px" }} >
           <Link href="#">
-            <a>
               <Badge variant="outline" variantColor="purple">
                 Projects
             </Badge> <Icon name="triangle-up" size="22px" color="purple.300" />
-            </a>
           </Link>
           <Projects />
         </div>
         <div id="exp" style={{ "paddingTop": "100px" }}>
           <Link href="#">
-            <a >
               <Badge variant="outline" variantColor="purple">
                 Timeline
             </Badge> <Icon name="triangle-up" size="22px" color="purple.300" />
-            </a>
           </Link>
 
         </div>

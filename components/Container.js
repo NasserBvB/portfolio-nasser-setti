@@ -76,11 +76,17 @@ const Container = ({ children }) => {
       </StickyNav>
       <Flex
         as="main"
-        justifyContent="center"
         flexDirection="column"
-        bg={bgColor[colorMode]}
-        color={primarytextColor[colorMode]}
-        px={8}
+        justifyContent="center"
+        alignItems="start"
+        maxWidth="900px"
+        width="100%"
+        bg={navBgColor[colorMode]}
+        as="nav"
+        p={8}
+        mt={[0, 8]}
+        mb={8}
+        mx="auto"
       >
         {children}
         <Footer />
