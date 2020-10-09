@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <Welcome />
-      <div id="exp" style={{"paddingTop": "100px"}}>
+      <div id="exp">
         <Timeline />
       </div>
     </Container>

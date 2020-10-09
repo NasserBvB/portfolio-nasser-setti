@@ -62,7 +62,7 @@ const Container = ({ children }) => {
             </Button>
           </NextLink>
           
-          <NextLink href="#" passHref>
+          <NextLink href="#about" passHref>
             <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
               About
             </Button>
