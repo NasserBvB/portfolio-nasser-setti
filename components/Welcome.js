@@ -7,12 +7,11 @@ export default function Welcome() {
     const color = { light: "black", dark: "white" };
     return (
         <div style={{width: "100%","display":"flex", "justifyContent": "center"}}>
-            <Box display="flex" justifyContent="space-around">
-                <PseudoBox role="group" maxW="sm" overflow="hidden" p={12} cursor="pointer" bg={bg[colorMode]} boxShadow="md" borderRadius="50px">
+                <PseudoBox role="group" maxW="xl" overflow="hidden" p={2} cursor="pointer" bg={bg[colorMode]} boxShadow="lg" borderRadius="50px" padding="150px" >
                     <Stack spacing={8} maxWidth="700px">
                         <PseudoBox fontWeight="bold" fontSize="sm" mb={20} color={color[colorMode]} >
-                            <Image rounded="full" size="100px" src="/nasser.jpg" alt="Nasser Setti" />
-                            <Heading as="h4" size="md" color={color[colorMode]}>Hey, I’m Nasser Setti</Heading>
+                            <Image rounded="full" size="150px" src="/nasser.jpg" alt="Nasser Setti" />
+                            <Heading as="h4" size="md" color={color[colorMode]}>Hey, I’m Abdennasser Es-sati (aka Nasser)</Heading>
                         </PseudoBox>
                         <PseudoBox color={color[colorMode]} mb={8} >
                             <Text fontSize="lg">
@@ -22,7 +21,6 @@ export default function Welcome() {
                         </PseudoBox>
                     </Stack>
                 </PseudoBox>
-            </Box>
         </div>
     )
 }

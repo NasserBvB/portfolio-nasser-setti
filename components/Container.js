@@ -55,11 +55,6 @@ const Container = ({ children }) => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="#pro" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Projects
-            </Button>
-          </NextLink>
           <NextLink href="#exp" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Timeline
@@ -89,7 +84,6 @@ const Container = ({ children }) => {
         mx="auto"
       >
         {children}
-        <Footer />
       </Flex>
     </>
   );
