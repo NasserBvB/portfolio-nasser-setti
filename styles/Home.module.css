@@ -17,6 +17,10 @@
   align-items: center;
 }
 
+.custom-nav-button:not(:last-child) {
+  margin-right: .5rem !important;
+}
+
 .footer {
   width: 100%;
   height: 100px;

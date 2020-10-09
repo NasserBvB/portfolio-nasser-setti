@@ -43,26 +43,27 @@ const Container = ({ children }) => {
         mt={[0, 8]}
         mb={8}
         mx="auto"
+        height="10vh"
       >
         <IconButton
           aria-label="Toggle dark mode"
           icon={colorMode === 'dark' ? 'sun' : 'moon'}
           onClick={toggleColorMode}
         />
-        <Box>
-          <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+        <Box display="flex" justifyContent="space-between">
+          <NextLink href="/" passHref  >
+            <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
               Home
             </Button>
           </NextLink>
           <NextLink href="#exp" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+            <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
               Timeline
             </Button>
           </NextLink>
           
-          <NextLink href="/about" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
+          <NextLink href="#" passHref>
+            <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
               About
             </Button>
           </NextLink>

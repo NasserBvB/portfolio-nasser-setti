@@ -76,7 +76,7 @@ const Subscribe = () => {
       my={4}
     >
       <Heading as="h5" size="lg" mb={2}>
-        Subscribe to the newsletter
+        Contact me !
       </Heading>
       <Text>
         Get emails from me about web development, tech, and early access to new
