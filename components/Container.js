@@ -84,6 +84,7 @@ const Container = ({ children }) => {
         mx="auto"
       >
         {children}
+        <Footer />
       </Flex>
     </>
   );
