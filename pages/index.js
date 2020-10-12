@@ -6,6 +6,7 @@ import Container from '../components/Container';
 import Welcome from "../components/Welcome";
 import Projects from '../components/Projects'
 import Timeline from '../components/Timeline';
+import NowPlaying from '../components/NowPlaying'
 export default function Home() {
   return (
     <Container className={styles.container}>
@@ -19,7 +20,9 @@ export default function Home() {
       <div id="exp">
         <Timeline />
       </div>
+      <NowPlaying/>
     </Container>
     
   )
 }
+
