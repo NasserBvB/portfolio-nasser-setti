@@ -4,7 +4,10 @@ import {
   Heading,
 
 
-  Icon, Link,
+
+
+
+  Link,
 
 
   Stack, Text,
@@ -55,14 +58,7 @@ const ProjectCard = ({ title, description, href, icon }) => {
         borderRadius={4}
         p={12}
       >
-        <Icon
-          aria-label="LinkedIn"
-          name={icon}
-          color={iconColor[colorMode]}
-          size="32px"
-          ml={2}
-          mr={4}
-        />
+
         <Stack>
           <Heading
             as="h4"
@@ -75,7 +71,6 @@ const ProjectCard = ({ title, description, href, icon }) => {
           </Heading>
           <Text lineHeight="1.3">{description}</Text>
         </Stack>
-
       </Flex>
     </Link>
   );
