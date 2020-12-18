@@ -19,6 +19,12 @@ export default function Welcome() {
                             You’ve found my personal slice of the internet – everything you want to know and more is here.
                                 </Text>
                     </PseudoBox>
+                    <PseudoBox color={color[colorMode]} mb={8} display="flex" justifyContent="flex-end">
+                        <Image rounded="full" size="30px" src="/react.svg" alt="React.js" />
+                        <Image rounded="full" size="30px" src="/nodejs-icon.svg" alt="Node.js" />
+                        <Image rounded="full" size="30px" src="/angular-icon-1.svg" alt="Angular" />
+                        <Image rounded="full" size="30px" src="/next-js.svg" alt="Next.js" />
+                    </PseudoBox>
                 </Stack>
             </PseudoBox>
         </div>
