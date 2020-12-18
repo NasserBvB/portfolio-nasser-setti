@@ -1,12 +1,9 @@
-import Head from 'next/head'
-import { Badge, Icon, Link, Flex } from "@chakra-ui/core";
-
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
 import Container from '../components/Container';
-import Welcome from "../components/Welcome";
-import Projects from '../components/Projects'
 import Timeline from '../components/Timeline';
-import NowPlaying from '../components/NowPlaying'
+import Welcome from "../components/Welcome";
+import styles from '../styles/Home.module.css';
+
 export default function Home() {
   return (
     <Container className={styles.container}>
@@ -17,12 +14,11 @@ export default function Home() {
       </Head>
 
       <Welcome />
-      <div id="exp">
+      <div id="exp" >
         <Timeline />
       </div>
-      <NowPlaying/>
     </Container>
-    
+
   )
 }
 

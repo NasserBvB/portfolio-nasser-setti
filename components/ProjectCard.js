@@ -1,14 +1,19 @@
-import React from 'react';
-import * as Fathom from 'fathom-client';
 import {
   Flex,
-  Link,
+
   Heading,
-  Text,
-  Stack,
-  Icon,
+
+
+  Icon, Link,
+
+
+  Stack, Text,
+
+
   useColorMode
 } from '@chakra-ui/core';
+import * as Fathom from 'fathom-client';
+import React from 'react';
 
 const trackGoal = (title) => {
   const goalCodes = {
@@ -70,6 +75,7 @@ const ProjectCard = ({ title, description, href, icon }) => {
           </Heading>
           <Text lineHeight="1.3">{description}</Text>
         </Stack>
+
       </Flex>
     </Link>
   );

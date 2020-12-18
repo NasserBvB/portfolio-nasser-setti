@@ -1,9 +1,9 @@
-import React from 'react';
-import NextLink from 'next/link';
-import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core';
+import { Box, Button, Flex, IconButton, useColorMode } from '@chakra-ui/core';
 import styled from '@emotion/styled';
-
+import NextLink from 'next/link';
+import React from 'react';
 import Footer from './Footer';
+
 
 const StickyNav = styled(Flex)`
   position: sticky;
@@ -61,10 +61,10 @@ const Container = ({ children }) => {
               Timeline
             </Button>
           </NextLink>
-          
-          <NextLink href="#about" passHref>
+
+          <NextLink href="/projects" passHref>
             <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
-              About
+              Projects
             </Button>
           </NextLink>
 
@@ -81,6 +81,7 @@ const Container = ({ children }) => {
         as="nav"
         p={8}
         mt={[0, 8]}
+        mb={8}        mt={[0, 8]}
         mb={8}
         mx="auto"
       >

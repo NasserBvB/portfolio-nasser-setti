@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/core';
 import React, { useState } from 'react';
 
-const YearDivider = () => {
+export const YearDivider = () => {
   const { colorMode } = useColorMode();
   const borderColor = {
     light: 'gray.200',
