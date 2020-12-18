@@ -81,7 +81,6 @@ const Container = ({ children }) => {
         as="nav"
         p={8}
         mt={[0, 8]}
-        mb={8}        mt={[0, 8]}
         mb={8}
         mx="auto"
       >
