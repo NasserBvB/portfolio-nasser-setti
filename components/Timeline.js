@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
 import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
   Button,
-  List,
+
+
+
+
+  Divider, Flex, Heading,
+
+
+
+
+
+  Icon, List,
   ListItem,
-  Icon,
-  Stack,
-  Divider
+
+  Stack, Text, useColorMode
 } from '@chakra-ui/core';
+import React, { useState } from 'react';
 
 const YearDivider = () => {
   const { colorMode } = useColorMode();
@@ -51,35 +56,22 @@ const FullTimeline = () => (
       2018
     </Heading>
     <List>
-      <TimelineStep title="Ba9ii  f EHTP  🎓">
-        MNANAUK HHHHHHHHHHH
+      <TimelineStep title="Still EHTP  🎓">
+        In this year it was just the electrical studies and some of the programming competitions. I already studied some intersting tools like Latex and R language.
       </TimelineStep>
     </List>
     <YearDivider />
-    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
-      2017
-    </Heading>
-    <List>
-      <TimelineStep title="Ba9ii  f EHTP  🎓">
-        MZZAAAAAAAL f EHTP hhhhhhhhhhh
-      </TimelineStep>
-    </List>
-    <YearDivider />
-    <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
-      2016
-    </Heading>
-    <List>
-      <TimelineStep title="Ba9ii  f EHTP  🎓">
-        hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-      </TimelineStep>
-    </List>
-    <YearDivider />
+
     <Heading as="h3" size="lg" fontWeight="bold" mb={4} letterSpacing="tighter">
       2015
     </Heading>
     <List>
       <TimelineStep title="Started at EHTP 🔥">
-        hhhhh hhhhhhhhh hhhhhhhhhh hhhhhhhhhhhhhhhhhh
+        My interest in getting more logic, algorithms, skills made me forget to choose which school and which field I should take .
+        I started my electrical studies in Hassania High School of Public Works ( EHTP / HHSPW).
+        I started realizing what goes wrong that let me choose eletrical engineering over diving into the IT world.
+        I participated into so much programming competitions such as MCPC(Moroccan Collegiate Programming Contest ). The C++ was the weapon because it was the only language that we studied in the electrical field
+
       </TimelineStep>
     </List>
     <YearDivider />
@@ -88,7 +80,8 @@ const FullTimeline = () => (
     </Heading>
     <List>
       <TimelineStep title="Preparatory classes">
-        HAD L3AMM KANAT 3JBANI L9RAYA hhhhhhhhh
+        After geeting a good  grade in my baccalaureate. I integrated the preparatory classes where I discovered a new subject that admired a lot. Making great things with an optimal amount of energy.
+        Logic, Maths and Coding . I studied a huge amount of theorems, algorithms, mathematical problems . The thing that sharpened my brain skills.
       </TimelineStep>
     </List>
     <YearDivider />
@@ -97,7 +90,7 @@ const FullTimeline = () => (
     </Heading>
     <List>
       <TimelineStep title="Graduated High School">
-        hlejrgejmkrjg rkfkjrz reggkljlmkerg erlgjkj.
+        I had my baccalaureate in this year where I was passionated by mathematics and proving things.
       </TimelineStep>
     </List>
     <YearDivider />
@@ -135,7 +128,7 @@ const Timeline = () => {
       </Heading>
       <List>
         <TimelineStep title="Joined 4D">
-          Finally hhhhhhhhhhh
+          After 9 months in Weenko. I joined 4D where I discovered new challenges . I studied new technologies.
         </TimelineStep>
       </List>
       <YearDivider />
@@ -149,8 +142,11 @@ const Timeline = () => {
         2019
       </Heading>
       <List>
-        <TimelineStep title="Software Engineer III ✨">
-          Kont knsalli f weenko
+        <TimelineStep title="Electrical Engineer  ✨">
+          I graduated from EHTP in this year . While I was preparing my last project on the electrical field, I discovered Angular.
+          I tried to understand it and try to build something with it. I prepare my CV and apply .
+          I worked at Weenko (Startup in Rabat) after one week of the graduation day. I found myself in the professional world , where i should use my Angular skills .
+          I studied the Node.js after realizing that I had to work on the backend as well . It was my first Node.js project.
         </TimelineStep>
       </List>
       {isShowingFullTimeline ? (
