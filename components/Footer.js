@@ -1,13 +1,9 @@
+import { Flex, IconButton, Link } from '@chakra-ui/core';
 import React from 'react';
-import NextLink from 'next/link';
-import { Flex, Link, IconButton } from '@chakra-ui/core';
-import Subscribe from './Subscribe';
 
 
 const Footer = () => (
-  <Flex align="center" mb={4} direction="column">
-    <Subscribe/>
-    <div>
+  <Flex align="center" mb={4} justifyContent='center' alignItems='center'>
       <Link href="https://twitter.com/NBvBJS" title="Twitter" isExternal>
         <IconButton
           aria-label="Twitter"
@@ -47,8 +43,7 @@ const Footer = () => (
           color="gray.500"
           variant="ghost"
         />
-      </Link>
-    </div>
+    </Link>
   </Flex>
 );
 

@@ -74,7 +74,7 @@ const Container = ({ children }) => {
         as="main"
         flexDirection="column"
         justifyContent="center"
-        alignItems="start"
+        alignItems="center"
         maxWidth="900px"
         width="100%"
         bg={navBgColor[colorMode]}

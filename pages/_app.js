@@ -1,11 +1,11 @@
-import { ThemeProvider, ColorModeProvider, useColorMode, CSSReset } from "@chakra-ui/core";
-import { Global, css } from "@emotion/core";
+import { ColorModeProvider, CSSReset, ThemeProvider, useColorMode } from "@chakra-ui/core";
+import { css, Global } from "@emotion/core";
 import { MDXProvider } from '@mdx-js/react';
-
 import MDXComponents from "../components/MDXComponents";
-import { prismLightTheme, prismDarkTheme } from '../styles/prism';
+import '../styles/globals.css';
+import { prismDarkTheme, prismLightTheme } from '../styles/prism';
 import theme from "../styles/theme";
-import '../styles/globals.css'
+
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();

@@ -1,34 +1,15 @@
 import {
   Flex,
-
   Heading,
-
-
-
-
-
   Link,
-
-
-  Stack, Text,
-
-
+  Stack,
+  Text,
   useColorMode
 } from '@chakra-ui/core';
-import * as Fathom from 'fathom-client';
 import React from 'react';
 
-const trackGoal = (title) => {
-  const goalCodes = {
-    'React 2025': '5WGDOKV0',
-    'Mastering Next.js': 'HV9HDL0O',
-    jamstackfns: 'LRXBPLZS'
-  };
 
-  Fathom.trackGoal(goalCodes[title], 0);
-};
-
-const ProjectCard = ({ title, description, href, icon }) => {
+const ProjectCard = ({ id, title, description, href, icon }) => {
   const { colorMode } = useColorMode();
   const borderColor = {
     light: 'gray.200',
@@ -39,13 +20,15 @@ const ProjectCard = ({ title, description, href, icon }) => {
     dark: 'white'
   };
 
+
+
+
   return (
     <Link
       mb={4}
-      href={href}
-      onClick={() => trackGoal(title)}
+      href={`/projectsList/${id}`}
+      // onClick={() => handleClick}
       title={title}
-      isExternal
       _hover={{
         boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.05)',
         textDecoration: 'none'

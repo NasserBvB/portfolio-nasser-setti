@@ -1,8 +1,12 @@
 import { Stack, Text } from "@chakra-ui/core";
-import { Projects } from "../lib/util";
+import React from "react";
+import useSWR from 'swr';
+import fetcher from '../lib/fetcher';
 import ProjectCard from "./ProjectCard";
 import { YearDivider } from "./Timeline";
+
 export default function Project() {
+    const { data } = useSWR('/api/projects', fetcher);
     return (
         <>
             <div style={{ padding: "10px" }}>
@@ -12,11 +16,9 @@ export default function Project() {
             <Stack display="flex" flexWrap="wrap" justifyContent="space-around">
 
                 {
-                    Projects && Projects.map((item, index) => {
+                    data && data.map((item, index) => {
                         return (
-                            <>
-                                <ProjectCard title={item.name} description={item.description} icon="github" key={index} />
-                            </>
+                            <ProjectCard title={item.name} id={item.id} description={item.description} href={item.href} icon="github" key={item.id} />
                         )
                     })
                 }
