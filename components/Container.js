@@ -15,7 +15,13 @@ const StickyNav = styled(Flex)`
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
-
+  React.useEffect(() => {
+    const def = localStorage.getItem('snasser-theme');
+    if (def === 'dark')
+    {
+      toggleColorMode()
+    }
+  }, [])
   const bgColor = {
     light: 'white',
     dark: 'gray.900'
@@ -28,6 +34,19 @@ const Container = ({ children }) => {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(23, 25, 35, 0.8)'
   };
+
+  const handleClick = () => {
+    const darkTheme = localStorage.getItem("snasser-theme")
+    toggleColorMode();
+    if (darkTheme === 'dark')
+    {
+      localStorage.setItem('snasser-theme', "light");
+    }
+    else
+    {
+      localStorage.setItem('snasser-theme', "dark");
+    }
+  }
 
   return (
     <>
@@ -48,7 +67,7 @@ const Container = ({ children }) => {
         <IconButton
           aria-label="Toggle dark mode"
           icon={colorMode === 'dark' ? 'sun' : 'moon'}
-          onClick={toggleColorMode}
+          onClick={handleClick}
         />
         <Box display="flex" justifyContent="space-between">
           <NextLink href="/" passHref  >
