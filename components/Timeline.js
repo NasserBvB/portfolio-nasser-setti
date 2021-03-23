@@ -1,18 +1,8 @@
 import {
   Button,
-
-
-
-
   Divider, Flex, Heading,
-
-
-
-
-
   Icon, List,
   ListItem,
-
   Stack, Text, useColorMode
 } from '@chakra-ui/core';
 import React, { useState } from 'react';
@@ -152,17 +142,17 @@ const Timeline = () => {
       {isShowingFullTimeline ? (
         <FullTimeline />
       ) : (
-          <Button
-            my={4}
-            mx="auto"
-            fontWeight="medium"
-            rightIcon="chevron-down"
-            variant="ghost"
-            onClick={() => showFullTimeline(true)}
-          >
-            See More
-          </Button>
-        )}
+        <Button
+          my={4}
+          mx="auto"
+          fontWeight="medium"
+          rightIcon="chevron-down"
+          variant="ghost"
+          onClick={() => showFullTimeline(true)}
+        >
+          See More
+        </Button>
+      )}
     </Flex>
   );
 };

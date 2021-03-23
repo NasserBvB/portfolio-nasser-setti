@@ -22,7 +22,6 @@ export async function getStaticProps({ params }) {
     const projects = await res.json()
     const project = projects.find((project) => project.id === params.id)
     // Pass post data to the page via props
-    console.log(project);
     return { props: { project } }
 }
 export default function Project({ project }) {

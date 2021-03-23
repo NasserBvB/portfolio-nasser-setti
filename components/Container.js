@@ -75,11 +75,11 @@ const Container = ({ children }) => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="#exp" passHref>
+          {/* <NextLink href="#exp" passHref>
             <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
               Timeline
             </Button>
-          </NextLink>
+          </NextLink> */}
 
           <NextLink href="/projects" passHref>
             <Button as="a" variant="ghost" p={[1, 4]} className="custom-nav-button">
