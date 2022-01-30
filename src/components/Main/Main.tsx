@@ -1,10 +1,4 @@
-import Particles from "react-tsparticles"
-import {Container} from "./styles"
-import {Hero} from "../Hero/Hero"
-import { About } from "../About/About";
-import { Contact } from "../Contact/Contact";
-import { Portfolio } from "../Portfolio/Portfolio";
-
+import Particles from "react-tsparticles";
 import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import htmlIcon from "../../assets/html-icon.svg";
@@ -16,6 +10,11 @@ import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
+import { About } from "../About/About";
+import { Contact } from "../Contact/Contact";
+import { Hero } from "../Hero/Hero";
+import { Container } from "./styles";
+
 
 
 export function Main(){
@@ -250,7 +249,6 @@ export function Main(){
     />
       <Hero></Hero>
       <About></About>
-      <Portfolio></Portfolio>
       <Contact></Contact>
     </Container>
   );
