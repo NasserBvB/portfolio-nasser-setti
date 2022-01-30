@@ -1,9 +1,9 @@
-import { Container, ContainerSucces } from './styles'
 import { useForm, ValidationError } from '@formspree/react'
-import { toast, ToastContainer } from 'react-toastify'
-import ReCAPTCHA from 'react-google-recaptcha'
 import { useEffect, useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { toast, ToastContainer } from 'react-toastify'
 import validator from 'validator'
+import { Container, ContainerSucces } from './styles'
 
 export function Form() {
   const [state, handleSubmit] = useForm('myyozglw')
@@ -77,7 +77,7 @@ export function Form() {
           errors={state.errors}
         />
         <ReCAPTCHA
-          sitekey="6LcAu-IdAAAAAJOTI5E_eRltZNQCvukIl2-f1glQ"
+          sitekey="6LcS8kceAAAAALZ8U3IHu5bWzcXF7eEStQ38FnNl"
           onChange={(e) => {
             setIsHuman(true)
           }}
