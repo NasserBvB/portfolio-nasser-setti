@@ -1,7 +1,7 @@
 import githubIcon from "../../assets/github.png";
 import linkedinIcon from "../../assets/linkedin.png";
 import reactIcon from "../../assets/react-icon.svg";
-import twitterIcon from "../../assets/twitter-icon.svg";
+import twitterIcon from "../../assets/twitter-icon.png";
 import { Container } from "./styles";
 
 
