@@ -1,9 +1,9 @@
-import { Container } from "./styles";
-import { BrowserRouter as Router } from "react-router-dom";
-import { NavHashLink, HashLink } from "react-router-hash-link";
 import { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { HashLink, NavHashLink } from "react-router-hash-link";
+import Curriculo from "../../assets/cv-abdennasser-essati.pdf";
+import { Container } from "./styles";
 
-import Curriculo from "../../assets/CV_JoaoTulio.pdf";
 export function Header() {
   const [isActive, setActive] = useState(false);
 
