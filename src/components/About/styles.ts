@@ -5,54 +5,51 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-
-  .hard-skills{
+  .hard-skills {
     margin-top: 1.6rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.8rem;
   }
-  .hability{
+  .hability {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    img{
+    img {
       width: 3.4rem;
     }
   }
 
-  h2{
+  h2 {
     display: inline-block;
     margin-bottom: 2rem;
     border-bottom: 0.2rem solid var(--blue);
   }
 
-  h3{
+  h3 {
     margin-top: 2rem;
     color: var(--green);
   }
 
-  p{
+  p {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
-  
-  
 
-  .about-image{
+  .about-image {
     text-align: center;
-   img{
-     margin-top: 2rem;
-     width: 100%;
-     filter: grayscale(1);
-     transition: filter 0.5s;
-     &:hover{
-       filter: grayscale(0);
-     }
-   }
+    img {
+      margin-top: 2rem;
+      width: 100%;
+      filter: grayscale(1);
+      transition: filter 0.5s;
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
   }
 
   @media only screen and (max-width: 480px) {
@@ -62,17 +59,17 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     display: block;
     text-align: center;
 
-    .about-image{
+    .about-image {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .hard-skills{
+    .hard-skills {
       justify-content: center;
     }
-    
   }
-
-`
+`;

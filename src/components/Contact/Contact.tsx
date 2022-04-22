@@ -5,7 +5,7 @@ import { Container } from "./styles";
 
 export function Contact() {
   return (
-    <Container id="contato">
+    <Container id="contact">
       <header>
         <h2>Contact me</h2>
         <p>

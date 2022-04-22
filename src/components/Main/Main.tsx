@@ -249,6 +249,7 @@ export function Main(){
     />
       <Hero></Hero>
       <About></About>
+      {/* <Portfolio/> */}
       <Contact></Contact>
     </Container>
   );
