@@ -7,7 +7,7 @@ export default function Experiences() {
   console.log(experiences);
   
   return (
-    <Wrapper>
+    <Wrapper id='experiences'>
       <h1>Experiences</h1>
       <List>
         {
