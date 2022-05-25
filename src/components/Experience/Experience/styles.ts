@@ -28,6 +28,7 @@ export const ExperienceCompanyTitle = styled.h1`
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #5f5b5b;
 
   & span {
     text-transform: capitalize;
