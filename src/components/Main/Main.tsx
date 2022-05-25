@@ -12,6 +12,7 @@ import vscodeIcon from "../../assets/vscode-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
 import { About } from "../About/About";
 import { Contact } from "../Contact/Contact";
+import Experiences from "../Experience";
 import { Hero } from "../Hero/Hero";
 import { Container } from "./styles";
 
@@ -249,7 +250,7 @@ export function Main(){
     />
       <Hero></Hero>
       <About></About>
-      {/* <Portfolio/> */}
+      <Experiences/>
       <Contact></Contact>
     </Container>
   );

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "title": "Experienced Designer Developer Engineer",
+    "company": {
+      "title": "SQLI",
+      "logo": "https://www.sqli.com/themes/custom/sqli_theme/dist/images/logo-text-animated.svg"
+    },
+    "period": "March 2022 - Present",
+    "description": "Cillum minim in consequat non dolore eu. Deserunt culpa voluptate duis laboris laboris sit adipisicing eu ex amet do est fugiat. In laboris nulla voluptate ullamco. Incididunt nisi veniam incididunt nulla mollit nostrud laborum do veniam labore. Exercitation quis enim irure tempor esse ex. Sunt commodo voluptate sunt aliquip amet ut magna ad velit qui tempor culpa non laboris. Dolor reprehenderit duis ex officia."
+  },
+  {
+    "id": 0,
+    "title": "Senior Software Engineer",
+    "company": {
+      "title": "BBLES",
+      "logo": "/bbles.jpeg"
+    },
+    "period": "March 2022 - May 2022",
+    "description": "Cillum minim in consequat non dolore eu. Deserunt culpa voluptate duis laboris laboris sit adipisicing eu ex amet do est fugiat. In laboris nulla voluptate ullamco. Incididunt nisi veniam incididunt nulla mollit nostrud laborum do veniam labore. Exercitation quis enim irure tempor esse ex. Sunt commodo voluptate sunt aliquip amet ut magna ad velit qui tempor culpa non laboris. Dolor reprehenderit duis ex officia."
+  },
+  {
+    "id": 0,
+    "title": "Research And Development Engineer",
+    "company": {
+      "title": "4D",
+      "logo": "https://us.4d.com/sites/all/themes/bactency/logo.png"
+    },
+    "period": "April 2020 - March 2022",
+    "description": "Cillum minim in consequat non dolore eu. Deserunt culpa voluptate duis laboris laboris sit adipisicing eu ex amet do est fugiat. In laboris nulla voluptate ullamco. Incididunt nisi veniam incididunt nulla mollit nostrud laborum do veniam labore. Exercitation quis enim irure tempor esse ex. Sunt commodo voluptate sunt aliquip amet ut magna ad velit qui tempor culpa non laboris. Dolor reprehenderit duis ex officia."
+  },
+  {
+    "id": 0,
+    "title": "Software Developer",
+    "company": {
+      "title": "WEENKO",
+      "logo": "https://offshore-developpement.com/sites/default/files/styles/thumbnail/public/logos/logo_aj65ctpfv_6.jpg?itok=eEUCrRHh"
+    },
+    "period": "July 2019 - April 2020",
+    "description": "Cillum minim in consequat non dolore eu. Deserunt culpa voluptate duis laboris laboris sit adipisicing eu ex amet do est fugiat. In laboris nulla voluptate ullamco. Incididunt nisi veniam incididunt nulla mollit nostrud laborum do veniam labore. Exercitation quis enim irure tempor esse ex. Sunt commodo voluptate sunt aliquip amet ut magna ad velit qui tempor culpa non laboris. Dolor reprehenderit duis ex officia."
+  },
+  {
+    "id": 0,
+    "title": "Web Developer",
+    "company": {
+      "title": "CAR RENTAL",
+      "logo": "https://www.free-work.com/assets/img/icons/building.svg"
+    },
+    "period": "September 2019 - October 2019",
+    "description": "Cillum minim in consequat non dolore eu. Deserunt culpa voluptate duis laboris laboris sit adipisicing eu ex amet do est fugiat. In laboris nulla voluptate ullamco. Incididunt nisi veniam incididunt nulla mollit nostrud laborum do veniam labore. Exercitation quis enim irure tempor esse ex. Sunt commodo voluptate sunt aliquip amet ut magna ad velit qui tempor culpa non laboris. Dolor reprehenderit duis ex officia."
+  }
+]
