@@ -4,8 +4,6 @@ import Experience, { IExperienceProps } from './Experience'
 import experiences from './data'
 
 export default function Experiences() {
-  console.log(experiences);
-  
   return (
     <Wrapper id='experiences'>
       <h1>Experiences</h1>

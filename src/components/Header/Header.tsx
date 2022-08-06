@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { HashLink, NavHashLink } from "react-router-hash-link";
-import Curriculo from "../../assets/cv-abdennasser-essati.pdf";
 import { Container } from "./styles";
 
 export function Header() {
@@ -46,7 +45,7 @@ export function Header() {
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
-          <a href={Curriculo} download className="button">
+          <a href="https://res.cloudinary.com/nasser-ecommerce/image/upload/v1659796841/My_work_resume-4_jabu3g.pdf" target="_blank" download className="button">
             CV
           </a>
         </nav>
@@ -54,7 +53,7 @@ export function Header() {
         <div
           aria-expanded={isActive ? "true" : "false"}
           aria-haspopup="true"
-          aria-label={isActive ? "Fechar menu" : "Abrir menu"}
+          aria-label={isActive ? "Close menu" : "Open menu"}
           className={isActive ? "menu active" : "menu"}
           onClick={() => {
             setActive(!isActive);
