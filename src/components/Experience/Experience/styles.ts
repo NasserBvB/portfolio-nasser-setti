@@ -8,7 +8,6 @@ export const ExperienceWrapper = styled.div`
   border-radius: 10px;
   padding: 1rem;
   color: black;
-  min-width: 400px;
   cursor: pointer;
 `;
 
@@ -40,10 +39,35 @@ export const ExperienceTitlesWrapper = styled.div`
   flex-direction: column;
 `;
 
-export const ExperienceDescription = styled.p`
+export const ExperienceDescription = styled.ul`
+  display: flex;
+  flex-direction: column;
   max-width: 50ch;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  li {
+    font-size: 1rem;
+    margin-left: 1rem;
+    &:before {
+      content: "•";
+      margin-right: 0.5rem;
+    }
+  }
 `;
 export const ExperienceCompanyLogo = styled.img`
   width: 50px;
   height: 50px;
+`;
+
+export const ExperienceActions = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #ccc;
+  padding: 0.5rem;
+
+   & > button {
+    color: var(--green);
+    background: transparent;
+   }
 `;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { List, Wrapper } from './styles'
-import Experience from './Experience'
-import experiences from './data.json'
+import Experience, { IExperienceProps } from './Experience'
+import experiences from './data'
 
 export default function Experiences() {
   console.log(experiences);
@@ -12,7 +12,7 @@ export default function Experiences() {
       <List>
         {
           experiences.map((experience, i) => (
-            <Experience { ...experience } key={i} id={i}></Experience>
+            <Experience { ...experience as IExperienceProps } key={i} id={i}></Experience>
           ))
         }
       </List>

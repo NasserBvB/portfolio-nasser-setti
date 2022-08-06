@@ -7,27 +7,27 @@ export function Hero(){
   return(
     <Container id="home">
       <div className="hero-text">
-        <ScrollAnimation animateIn="fadeInUp">
+        <ScrollAnimation animateOnce animateIn="fadeInUp">
           <p>Hello 👋, I'm</p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.2*1000}>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={0.2*1000}>
           <h1>Nasser Setti</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>Full Stack Developer</h3>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
+        <ScrollAnimation animateOnce animateIn="fadeInUp" delay={0.6 * 1000}>
           <p className="small-resume">I'm a computer engineer with a focus on web development with JavaScript.</p>
         </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeInUp" delay={0.8*1000}>
+          <ScrollAnimation animateOnce animateIn="fadeInUp" delay={0.8*1000}>
             <BrowserRouter>
               <NavHashLink smooth to="#contact" className="button">Contact me</NavHashLink>
             </BrowserRouter>
           </ScrollAnimation>
       </div>
       <div className="hero-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={1*1000}>
+        <ScrollAnimation animateOnce animateIn="fadeInRight" delay={1*1000}>
           <img src={Illustration} alt="Nasser Setti"/>
         </ScrollAnimation>
       </div>

@@ -7,9 +7,7 @@ export const Wrapper = styled.div`
 `
 
 export const List = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 `
