@@ -77,29 +77,5 @@ const data = [
       "Writing e2e ,integration and unit tests",
     ],
   },
-  {
-    id: 0,
-    title: "Web Developer",
-    company: {
-      title: "CAR RENTAL",
-      logo: "https://www.free-work.com/assets/img/icons/building.svg",
-    },
-    period: "September 2019 - October 2019",
-    description: [
-      "Do the architectural design to materialize the idea of creating a metabox that will contain a cryptocurrency and an NFT.",
-      "Develop and lead frontend work.",
-      {
-        title: "My daily tasks included:",
-        children: [
-          "Code refactoring",
-          "Setting up codebases",
-          "Coming up with the front-end architecture",
-          "Benchmarking",
-          "Writing E2E, integration and unit tests ",
-          "Recruiting and mentorship",
-        ],
-      },
-    ],
-  },
 ];
 export default data;
