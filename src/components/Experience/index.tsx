@@ -1,10 +1,8 @@
-import React from 'react'
-import { List, Wrapper } from './styles'
-import Experience, { IExperienceProps } from './Experience'
-import experiences from './data'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { ExperienceHeader, ExperienceCompanyLogo, ExperienceTitlesWrapper, ExperienceTitle, ExperienceCompanyTitle, ExperienceDescription } from './Experience/styles';
+import experiences from './data';
+import { ExperienceCompanyTitle, ExperienceDescription, ExperienceHeader, ExperienceTitle, ExperienceTitlesWrapper } from './Experience/styles';
+import { List, Wrapper } from './styles';
 
 export default function Experiences() {
   return (
@@ -27,7 +25,7 @@ export default function Experiences() {
               }}
               date={experience.period}
               iconStyle={{ background: 'white', color: '#fff' }}
-              icon={<img src={experience.company.logo} height="100%" width="100%" style={{ overflow: "hidden", borderRadius: "50%" }} />}
+              icon={<img alt={experience.company.title} src={experience.company.logo} height="100%" width="100%" style={{ overflow: "hidden", borderRadius: "50%" }} />}
             >
               <ExperienceHeader>
                 <ExperienceTitlesWrapper>

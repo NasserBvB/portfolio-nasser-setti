@@ -11,6 +11,7 @@ import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
 import vueIcon from "../../assets/vue-icon.svg";
 import { About } from "../About/About";
+import Comments from "../Comment";
 import { Contact } from "../Contact/Contact";
 import Experiences from "../Experience";
 import { Hero } from "../Hero/Hero";
@@ -251,6 +252,7 @@ export function Main(){
       <Hero></Hero>
       <About></About>
       <Experiences/>
+      <Comments/>
       <Contact></Contact>
     </Container>
   );

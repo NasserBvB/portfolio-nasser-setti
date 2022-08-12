@@ -9,6 +9,14 @@ export function Header() {
   function toggleTheme() {
     let html = document.getElementsByTagName("html")[0];
     html.classList.toggle("light");
+
+    const event = new CustomEvent("themeChange", {
+      detail: {
+        theme: html.classList.contains("light") ? "light" : "dark",
+      },
+    })
+
+    dispatchEvent(event);
   }
 
   function closeMenu() {
@@ -45,7 +53,10 @@ export function Header() {
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
-          <a href="https://res.cloudinary.com/nasser-ecommerce/image/upload/v1659796841/My_work_resume-4_jabu3g.pdf" target="_blank" download className="button">
+          <NavHashLink smooth to="#comments" onClick={closeMenu}>
+            Leave a comment
+          </NavHashLink>
+          <a href="https://res.cloudinary.com/nasser-ecommerce/image/upload/v1659796841/My_work_resume-4_jabu3g.pdf" rel="noreferrer" target="_blank" download className="button">
             CV
           </a>
         </nav>
