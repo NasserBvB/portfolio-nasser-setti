@@ -1,122 +1,92 @@
 {
-  "GuideData": {
-    "ads": {
-      "type": {
-        "BannerAd": "appLovin",
-        "InterstitialAd": "appLovin",
-        "NativeAd": "appLovin"
+  "active": true,
+  "type": "appLovin",
+  "admob": {
+    "BannerAdmobId": "ca-app-pub-6750790982638800/6035170865",
+    "InterstitialAdmobId": "ca-app-pub-6750790982638800/4888227264",
+    "NativeAdmobId": "ca-app-pub-6750790982638800/3006247490",
+    "repository": "native-admob",
+    "nativeAdConfig": {
+      "numOfAds": 10,
+      "nonPersonalizedAdsOnly": false,
+      "videoOptions": {
+        "mute": true,
+        "clickToExpand": true
       },
-      "accessToken": {
-        "admob": {
-          "appId": "ca-app-pub-3940256099942544~3347511713zjehfb",
-          "BannerAdmobId": "zkehuf",
-          "InterstitialAdmobId": "zekhfj",
-          "NativeAdmobId": "zkjehfjn"
-        },
-        "appLovin": {
-          "maxBanner": "31efcdcddzkehjfhj2618d0e",
-          "maxInterstitial": "d1a92zejgfygf6e45747abb",
-          "maxNative": "64de1azkehgufb5d34deb45"
-        },
-        "ironsource": {
-          "ironsource_appKey": "",
-          "userId": "",
-          "options": {
-            "validateIntegration": true
+      "expirationPeriod": 3600000,
+      "mediationEnabled": false
+    }
+  },
+  "appLovin": {
+    "maxBanner": "31efcdcddzkehjfhj2618d0e",
+    "maxInterstitial": "4d2dc2623f7d8969",
+    "maxNative": "64de1azkehgufb5d34deb45",
+    "SDK_KEY": "UARQzlJe1TcKhSMwC99rg_MT9wCh590inpL42H5hMooGCpNXTMlKvBhyqM2Vpmr7ryHrWPJxwm3B2l0HNvNxCa",
+    "AdReviewKey": "mIfLAocOdc_ayr8Sadygm39bzAbGP397nsHvs1EH7yeT7L2JU7sTqieTr5tJgGXPmmbPmTZ4iCCndUb_c_yPGv"
+  },
+  "ironSource": {
+    "ironsource_appKey": "16382d785",
+    "userId": "237914"
+  },
+  "unity": {
+    "unity_game_id": "",
+    "unity_test": true,
+    "unity_banner": "banner",
+    "unity_interstitial": "video"
+  },
+  "myBanner": {
+    "ImageBanner": false,
+    "ImageBannerImg": "",
+    "ImageBannerURL": ""
+  },
+  "modelApp": "model2",
+  "configuration": {
+    "model2": {
+      "welcome": {
+        "intro": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "rules": [
+          {
+            "title": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse 1.",
+            "nextLink": "Screen1"
+          },
+          {
+            "title": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse 2.",
+            "nextLink": "Screen2"
+          },
+          {
+            "title": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse 3.",
+            "nextLink": "Screen3"
+          },
+          {
+            "title": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse 4.",
+            "nextLink": "Screen4"
+          },
+          {
+            "title": "Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse 5.",
+            "nextLink": "Screen5"
           }
-        },
-        "unity": {
-          "unity_game_id": "",
-          "unity_test": true,
-          "unity_banner": "banner",
-          "unity_interstitial": "video"
-        },
-        "myBanner": {
-          "ImageBanner": false,
-          "ImageBannerImg": "",
-          "ImageBannerURL": ""
-        }
+        ]
+      },
+      "screen1": {
+        "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "previousLink": "Welcome"
+      },
+      "screen2": {
+        "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "previousLink": "Welcome"
+      },
+      "screen3": {
+        "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "previousLink": "Welcome"
+      },
+      "screen4": {
+        "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "previousLink": "Welcome"
+      },
+      "screen5": {
+        "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
+        "previousLink": "Welcome"
       }
-    },
-    "items": [
-      {
-        "title": "Gacha Cute Game",
-        "image": "https://www.gachaultra.com/gachacute/image1.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "Gacha Cute Game introduces everyone to social gameplay with the perfect combination of gacha elements to bring the most exciting and funny activities. It also comes with a complex and in-depth fashion system for everyone to create their most gorgeous characters with their boundless creativity.",
-        "isNative": false,
-        "background": "#FFFFFF"
-      },
-      {
-        "title": "CREATE AND CUSTOMIZE THE MOST BEAUTIFUL CHARACTER",
-        "image": "https://www.gachaultra.com/gachacute/image2.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "The first thing that players need to do when they first come to the game is to create and customize their career’s first character with many outstanding styles. That includes extensive extensions in altering features like nose, mouth, eye shape, appearance, and more to please everyone. More new skins will appear in the future through gacha events to excite people even further.",
-        "isNative": false,
-        "background": "#FFFFFF"
-      },
-      {
-        "title": "EXPLORE THE FASCINATING VIRTUAL WORLD",
-        "image": "https://www.gachaultra.com/gachacute/image3.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "A large world will be a place where people come and go and have a great time together, interacting in various ways. In particular, the accompanying mini-games or activities are always creative and will motivate people to do many things to receive more attractive rewards actively. The funniest thing is that the world is built by everyone’s endless joy and luck.",
-        "isNative": false,
-        "background": "#FFFFFF"
-      },
-      {
-        "title": "INTRIGUING GACHA MINI-GAMES WITH PLENTIFUL REWARDS",
-        "image": "https://www.gachaultra.com/gachacute/image4.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "The mini-games hidden all over the city are mostly built with gacha style to test the player’s luck. That includes spending coins in multiple stores or hunting for rare items to complete the vast collection incorporated in the system. Their luck determines the value of the rewards and fills up the accumulated points for events.",
-        "isNative": false,
-        "background": "#FFFFFF"
-      },
-      {
-        "title": "BATTLE WITH OTHER PLAYERS THROUGH WITS",
-        "image": "https://www.gachaultra.com/gachacute/image5.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "Fighting other players is seen as an extra activity with endless excitement to give everyone as much emotional stimulation as possible. The course of the fight is fast-paced, but the style is simple, so it’s seen as a form of supplemental content for entertainment. Its rewards are also generous and rich in the potential for people to have as many euphoric experiences as possible.",
-        "isNative": false,
-        "background": "#FFFFFF"
-      },
-      {
-        "title": "FREE MODIFIED GACHA GAME",
-        "image": "https://www.gachaultra.com/gachacute/image6.jpg",
-        "color": "#000000",
-        "text_size": "20",
-        "isLink": false,
-        "link_title": "",
-        "setLink": "",
-        "image_link": "",
-        "text": "Ready for more action? Gacha over 180 units to use in battle! Choose from four different modes, including Story mode, Tower mode, and more! Collect gems, gold, and materials to enhance, awaken, and increase your skill levels! You can also play your favorite mini-games and collect gems and bytes to Gacha for more units! What are you waiting for? Step into Gacha Club and begin your adventure today!",
-        "isNative": false,
-        "background": "#FFFFFF"
-      }
-    ]
+    }
   }
 }
