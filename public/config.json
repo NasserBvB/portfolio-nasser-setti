@@ -69,23 +69,28 @@
       },
       "screen1": {
         "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
-        "previousLink": "Welcome"
+        "previousLink": "Welcome",
+        "image": "https://picsum.photos/200/300"
       },
       "screen2": {
         "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
-        "previousLink": "Welcome"
+        "previousLink": "Welcome",
+        "image": "https://picsum.photos/200/300"
       },
       "screen3": {
         "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
-        "previousLink": "Welcome"
+        "previousLink": "Welcome",
+        "image": "https://picsum.photos/200/300"
       },
       "screen4": {
         "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
-        "previousLink": "Welcome"
+        "previousLink": "Welcome",
+        "image": "https://picsum.photos/200/300"
       },
       "screen5": {
         "intro":"Occaecat laboris quis reprehenderit dolore aute et cupidatat aliquip. Consequat aute sunt proident esse veniam sunt veniam amet Lorem ullamco magna labore nostrud. Nulla ut aute consequat aute sunt adipisicing ad. Incididunt aliqua minim nostrud esse. Lorem et pariatur sit ad.",
-        "previousLink": "Welcome"
+        "previousLink": "Welcome",
+        "image": "https://picsum.photos/200/300"
       }
     }
   }
