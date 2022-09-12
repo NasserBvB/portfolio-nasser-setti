@@ -93,5 +93,10 @@
         "image": "https://picsum.photos/200/300"
       }
     }
+  },
+  "rating": {
+    "canClose": true,
+    "demand": "Please give us a rate on play store",
+    "question": "In order to proceed"
   }
 }
