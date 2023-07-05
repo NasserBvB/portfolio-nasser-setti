@@ -1,12 +1,34 @@
 const data = [
   {
     id: 0,
+    title: "Research And Development Engineer",
+    company: {
+      title: "4D",
+      logo: "https://us.4d.com/sites/all/themes/bactency/logo.png",
+    },
+    period: "January 2023 - Present",
+    description: [
+      {
+        title:
+          "Worked mostly on building fast and performant web and mobile apps using React, Angular, Ionic and Node.js , my daily tasks included:",
+        children: [
+          "Code refactoring",
+          "Setting up codebases",
+          "Coming up with the front-end architecture",
+          "Benchmarking",
+          "Writing E2E, integration and unit tests ",
+        ],
+      },
+    ],
+  },
+  {
+    id: 0,
     title: "Experienced Designer Developer Engineer",
     company: {
       title: "SQLI",
       logo: "https://www.sqli.com/themes/custom/sqli_theme/dist/images/logo-text-animated.svg",
     },
-    period: "April 2022 - Present",
+    period: "April 2022 - December 2022",
     description: [
       "Develop a design system to build a group of sites for a client.",
       "Code refactoring",
