@@ -20,10 +20,6 @@ export function Contact() {
             abdennasseressati@gmail.com
           </a>
         </div>
-        <div>
-          <img src={phoneIcon} alt="Phone" />
-          <a href="tel:+212622133080">(212) 622-133-080</a>
-        </div>
       </div>
       <Form></Form>
     </Container>
