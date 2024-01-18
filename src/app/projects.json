@@ -1,0 +1,157 @@
+[
+  {
+    "title": "CareerCard",
+    "abstract": "An application for resources management.",
+    "description": "Building design system, rebuilding the front-end and back-end of the existing solution, rebuilding the mobile application (iOS + Android), refactoring code, implementing new features, and reviewing code.",
+    "technologies": [
+      "Node JS",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "React Native"
+    ],
+    "links": [
+      {
+        "github": "",
+        "website": "https://careercard-dev.4d-ps.com",
+        "label": "Project Link"
+      },
+      {
+        "github": "",
+        "website": "",
+        "label": "Mobile Application (pending to be deployed)"
+      }
+    ]
+  },
+  {
+    "title": "Lycra",
+    "abstract": "A collection of applications and websites.",
+    "description": "Building design system, maintaining the front-end of the existing solution, refactoring code, implementing new features, writing E2E, integration and unit tests, and reviewing code.",
+    "technologies": [
+      "Twig",
+      "JavaScript",
+      "Storybook",
+      "Sass",
+      "Cypress",
+      "Jest"
+    ],
+    "links": [
+      {
+        "github": "",
+        "website": "https://one.lycra.com/en",
+        "label": "Project Link"
+      }
+    ]
+  },
+  {
+    "title": "Portfolio",
+    "abstract": "A website to show my work.",
+    "description": "Building a website using Next.js, studying, building and optimizing animations.",
+    "technologies": ["Typescript", "Next.js"],
+    "links": [
+      {
+        "github": "",
+        "website": "https://snasser.dev",
+        "label": "Project Link"
+      }
+    ]
+  },
+  {
+    "title": "Metacard",
+    "abstract": "Creation of website and web application.",
+    "description": "Building a website using Next.js, studying, building and optimizing animations, writing E2E, integration and unit tests, and reviewing code.",
+    "technologies": ["Typescript", "Nextjs", "FastApi", "GCP"],
+    "links": [
+      {
+        "github": "",
+        "website": "https://metacard.gift",
+        "label": "Project Link"
+      }
+    ]
+  },
+  {
+    "title": "Process Watch",
+    "abstract": "An application that watches cloud platform emails.",
+    "description": "Admin web app development using TypeScript, CRA, styled-components, Core REST API development using Node JS, Express, MongoDB, Mongoose.",
+    "technologies": [
+      "TypeScript",
+      "CRA",
+      "styled-components",
+      "Node JS",
+      "Express",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "links": [
+      {
+        "github": "",
+        "website": "https://app.process.watch",
+        "label": "Project Link"
+      }
+    ]
+  },
+  {
+    "title": "ScoCloud",
+    "abstract": "A plugin that runs under Kaseya.",
+    "description": "Development of backend features using Node.js (boilerplate izm.js), development of interfaces with React JS using TypeScript, admin web app development using TypeScript, CRA, styled-components, Core REST API development using Node JS, Express, MongoDB, Mongoose.",
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React JS",
+      "CRA",
+      "styled-components",
+      "Express",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "links": []
+  },
+  {
+    "title": "Vcloud API Connector",
+    "abstract": "A tool that permits the use of VCloud API dynamically.",
+    "description": "Implementing authentication, managing organizations, switching data centers easily.",
+    "technologies": ["TypeScript", "OOP", "vmware docs"],
+    "links": []
+  },
+  {
+    "title": "4D-CLI",
+    "abstract": "A tool command line interface that generates starter templates for new projects.",
+    "description": "Prepare templates (web, mobile, backends, connectors, services).",
+    "technologies": ["TypeScript", "OOP", "Commander"],
+    "links": []
+  },
+  {
+    "title": "4D Connector",
+    "abstract": "A tool that permits the use of a 4D database.",
+    "description": "Implementing authentication, managing licenses.",
+    "technologies": ["TypeScript", "OOP", "4D docs"],
+    "links": []
+  },
+  {
+    "title": "MBM Project",
+    "abstract": "Church givings management platform.",
+    "description": "Restyling web application, restyling mobile application, building API.",
+    "technologies": [
+      "Node.js",
+      "Angular",
+      "Ionic",
+      "Typescript",
+      "4D connector"
+    ],
+    "links": []
+  },
+  {
+    "title": "GAM Payment",
+    "abstract": "An application for paying bills, smartphone resales, and performing refills.",
+    "description": "Building bill payment service, maintaining smartphone resales service, helping on architecture for refill service.",
+    "technologies": ["Node.js", "Angular", "Typescript", "ESB Integrator"],
+    "links": []
+  },
+  {
+    "title": "GAM Monitoring",
+    "abstract": "An application for monitoring payment services.",
+    "description": "Building interfaces, building API.",
+    "technologies": ["Spring Boot", "Angular", "Typescript"],
+    "links": []
+  }
+]

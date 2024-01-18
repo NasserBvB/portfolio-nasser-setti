@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Software Engineer",
+    "role": "Full Stack Engineer",
+    "company": "4D",
+    "startDate": "January 2023",
+    "endDate": "Present",
+    "description": "Worked mostly on building fast and performant web and mobile apps using React, Angular, Ionic, and Node.js. Daily tasks included code refactoring, setting up codebases, coming up with front-end architecture, benchmarking, and writing E2E, integration, and unit tests.",
+    "technologies": ["React", "Node.js", "Next.js", "MongoDb", "React Native"],
+    "links": [
+      {
+        "label": "4D",
+        "website": "https://4d.com"
+      }
+    ]
+  },
+  {
+    "title": "Frontend Engineer",
+    "role": "Frontend Engineer",
+    "company": "SQLI",
+    "startDate": "April 2022",
+    "endDate": "December 2023",
+    "description": "Developed a design system to build a group of sites for a client.",
+    "technologies": [
+      "Twig",
+      "JavaScript",
+      "Storybook",
+      "Sass",
+      "Cypress",
+      "Jest"
+    ],
+    "links": [
+      {
+        "label": "SQLI",
+        "website": "https://sqli.com"
+      }
+    ]
+  },
+  {
+    "title": "Full Stack Engineer",
+    "role": "Senior Software Engineer",
+    "company": "BBLES",
+    "startDate": "February 2022",
+    "endDate": "April 2022",
+    "description": "Did the architectural design to materialize the idea of creating a metabox that will contain a cryptocurrency and an NFT. Developed and led frontend work. Daily tasks included code refactoring, setting up codebases, coming up with front-end architecture, benchmarking, writing E2E, integration, and unit tests. Also involved in recruiting and mentorship.",
+    "technologies": ["Typescript", "Nextjs", "FastApi", "GCP"],
+    "links": [
+      {
+        "label": "MetaCard",
+        "website": "https://www.metacard.gift"
+      }
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "role": "Full Stack Engineer",
+    "company": "4D",
+    "startDate": "April 2020",
+    "endDate": "February 2022",
+    "description": "Worked mostly on building fast and performant web and mobile apps using React, Angular, Ionic, and Node.js. Daily tasks included code refactoring, setting up codebases, coming up with front-end architecture, benchmarking, and writing E2E, integration, and unit tests.",
+    "technologies": ["React", "Angular", "Ionic", "Node.js"],
+    "links": [
+      {
+        "label": "4D",
+        "website": "https://4d.com"
+      }
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "role": "Full Stack Engineer",
+    "company": "Weenko",
+    "startDate": "July 2019",
+    "endDate": "April 2020",
+    "description": "Built bills payment service, maintained smartphone resale service, and refill service. Refactored code and implemented new features. Implemented APIs and mediation using ESB bus. Also, wrote E2E, integration, and unit tests.",
+    "technologies": ["Node.js", "Angular", "MySQL"],
+    "links": []
+  }
+]
