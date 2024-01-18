@@ -5,7 +5,7 @@ import projects from "./projects.json";
 import Experience, { IExperience } from "../components/experience";
 import Project, { IProject } from "../components/project";
 
-const containerCN = "flex flex-col min-h-screen container mx-auto px-2 md:px-0";
+const containerCN = "flex flex-col min-h-screen container mx-auto px-6 lg:px-4";
 const sectionCN = "flex flex-col gap-4 mt-6";
 const h1CN = "text-2xl font-bold uppercase";
 const h2CN = "text-lg font-semibold";
@@ -68,7 +68,7 @@ export default function Home() {
           <Link
             aria-label="Full Résumé"
             className="flex gap-4 items-center"
-            href="https://asset.cloudinary.com/nasser-ecommerce/f1ec101ba340724b15990b6ba816ab46"
+            href="https://asset.cloudinary.com/nasser-ecommerce/5a7bf3abe579cd4d9c1a4a02145c5832"
             target="_blank"
             rel="noreferrer"
             title="Full Résumé"
