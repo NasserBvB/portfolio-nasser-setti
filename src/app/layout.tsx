@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AboutPage } from "schema-dts";
 import "./globals.css";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "SASS Developer",
     "Tailwind Developer",
   ],
-  icons: [ 
+  icons: [
     {
       url: "https://snasser.dev/nasser.jpg",
       sizes: "32x32",
@@ -139,6 +139,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>{children}</body>
+      <GoogleTagManager gtmId="G-JTT5FG2YRK" />
     </html>
   );
 }

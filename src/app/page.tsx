@@ -5,7 +5,7 @@ import projects from "./projects.json";
 import Experience, { IExperience } from "../components/experience";
 import Project, { IProject } from "../components/project";
 
-const containerCN = "flex flex-col min-h-screen container mx-auto";
+const containerCN = "flex flex-col min-h-screen container mx-auto px-2 md:px-0";
 const sectionCN = "flex flex-col gap-4 mt-6";
 const h1CN = "text-2xl font-bold uppercase";
 const h2CN = "text-lg font-semibold";
