@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "SASS Developer",
     "Tailwind Developer",
   ],
-  icons: [
+  icons: [ 
     {
       url: "https://snasser.dev/nasser.jpg",
       sizes: "32x32",
