@@ -5,6 +5,7 @@ import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Portfolio - ABDENNASSER ES-SATI - NASSER SETTI",
@@ -142,6 +143,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
       <GoogleTagManager gtmId="G-JTT5FG2YRK" />
     </html>
