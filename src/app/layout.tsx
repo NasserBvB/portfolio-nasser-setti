@@ -4,6 +4,7 @@ import { AboutPage } from "schema-dts";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Portfolio - ABDENNASSER ES-SATI - NASSER SETTI",
@@ -138,7 +139,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <SpeedInsights />
+      </body>
       <GoogleTagManager gtmId="G-JTT5FG2YRK" />
     </html>
   );
