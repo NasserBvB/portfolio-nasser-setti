@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import { AboutPage } from "schema-dts";
 import "./globals.css";
 import { GoogleTagManager } from "@next/third-parties/google";
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin", "vietnamese"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Header from "../components/header";
+import { cn } from "../utils";
 
 export const metadata: Metadata = {
   title: "Portfolio - ABDENNASSER ES-SATI - NASSER SETTI",
@@ -140,7 +145,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={cn(roboto.className, "container mx-auto px-6 lg:px-4")}>
+        <Header />
         {children}
         <SpeedInsights />
         <Analytics />

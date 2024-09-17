@@ -5,7 +5,7 @@ import projects from "./projects.json";
 import Experience, { IExperience } from "../components/experience";
 import Project, { IProject } from "../components/project";
 
-const containerCN = "flex flex-col min-h-screen container mx-auto px-6 lg:px-4";
+const containerCN = "flex flex-col min-h-screen";
 const sectionCN = "flex flex-col gap-4 mt-6";
 const h1CN = "text-2xl font-bold uppercase";
 const h2CN = "text-lg font-semibold";
@@ -112,9 +112,6 @@ export default function Home() {
 
       <section className={sectionCN}>
         <h2 className={`${h2CN} uppercase`}>Experience</h2>
-        {/* 
-          @TODO: Add experiences
-        */}
         <div>
           {(experiences as unknown as IExperience[]).map((experience) => (
             <Experience key={experience.title} experience={experience} />
@@ -124,9 +121,6 @@ export default function Home() {
 
       <section className={sectionCN}>
         <h2 className={`${h2CN} uppercase`}>Projects</h2>
-        {/* 
-          @TODO: Add projects
-        */}
         <div>
           {(projects as unknown as IProject[]).map((project) => (
             <Project key={project.title} project={project} />
