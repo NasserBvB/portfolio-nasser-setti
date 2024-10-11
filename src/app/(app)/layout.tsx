@@ -1,36 +1,36 @@
-import React from 'react'
-import './globals.scss'
-import { Inter } from 'next/font/google'
-import Header from '@/components/Header'
-import { ThemeProvider } from '@/components/theme-provider'
-import Footer from '@/components/Footer'
-import { Metadata } from 'next'
+import React from "react";
+import "./globals.scss";
+import { Inter } from "next/font/google";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Nasser S. Portfolio',
+  title: "Portfolio | Nasser S. Portfolio",
   description:
-    'Explore my portfolio to discover my professional journey, featured projects, mastered competencies, and insights on industry trends.',
-  keywords: 'portfolio, projects, experiences, blogs, skills',
+    "Explore my portfolio to discover my professional journey, featured projects, mastered competencies, and insights on industry trends.",
+  keywords: "portfolio, projects, experiences, blogs, skills",
   icons: [
     {
-      rel: 'icon',
-      type: 'image/jpeg',
-      sizes: '32x32',
-      url: '/nasser.jpg',
+      rel: "icon",
+      type: "image/jpeg",
+      sizes: "32x32",
+      url: "/nasser.jpg",
     },
     {
-      rel: 'icon',
-      type: 'image/jpeg',
-      sizes: '16x16',
-      url: '/nasser.jpg',
+      rel: "icon",
+      type: "image/jpeg",
+      sizes: "16x16",
+      url: "/nasser.jpg",
     },
   ],
-}
+};
 
 /* Our app sits here to not cause any conflicts with payload's root layout  */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -40,8 +40,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <body
         className="container flex flex-col"
         style={{
-          margin: '0 auto !important',
-          padding: '0rem 1rem !important',
+          margin: "0 auto !important",
+          padding: "0rem 1rem !important",
         }}
       >
         <ThemeProvider
@@ -56,7 +56,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </ThemeProvider>
       </body>
     </html>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

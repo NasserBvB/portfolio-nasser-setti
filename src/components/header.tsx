@@ -1,12 +1,11 @@
 'use client'
 
 import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Dispatch, Fragment, SetStateAction, useState } from 'react'
+import { ModeToggle } from './theme-provider'
 import { Button } from './ui/button'
 import { Separator } from './ui/separator'
-import { ModeToggle } from './theme-provider'
 
 const HeaderComponent = () => {
   const [open, setOpen] = useState(false)
