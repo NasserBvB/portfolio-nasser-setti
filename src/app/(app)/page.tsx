@@ -1,11 +1,15 @@
-import BlogCard from '@/components/cards/blog'
-import ExperienceCard from '@/components/cards/experience'
-import ProjectCard from '@/components/cards/project'
-import { Badge } from '@/components/ui/badge'
-import { getBlogs, getExperiences, getProjects, getSkills } from '@/lib/data'
-import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import BlogCard from "../../components/cards/blog";
+import ExperienceCard from "../../components/cards/experience";
+import ProjectCard from "../../components/cards/project";
+import { Badge } from "../../components/ui/badge";
+import {
+  getBlogs,
+  getExperiences,
+  getProjects,
+  getSkills,
+} from "../../lib/data";
 
 export default async function Portfolio() {
   const [blogs, experiences, projects, skills] = await Promise.all([
@@ -13,7 +17,7 @@ export default async function Portfolio() {
     getExperiences(3),
     getProjects(3),
     getSkills(),
-  ])
+  ]);
 
   return (
     <main>
@@ -25,9 +29,10 @@ export default async function Portfolio() {
               Creative Developer & Architect
             </h1>
             <p className="text-xl text-muted-foreground">
-              Designing digital experiences that captivate, inspire, and engage users through
-              creativity and innovation, fostering meaningful interactions that leave a lasting
-              impact and drive deeper connections.
+              Designing digital experiences that captivate, inspire, and engage
+              users through creativity and innovation, fostering meaningful
+              interactions that leave a lasting impact and drive deeper
+              connections.
             </p>
           </div>
           <div className="relative flex items-center justify-center sm:justify-end rounded-xl overflow-hidden">
@@ -48,15 +53,17 @@ export default async function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Discover My Story</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Uncover the passion and expertise that drives my work. My journey is a testament to
-            creativity, innovation, and a relentless pursuit of excellence in every project.
+            Uncover the passion and expertise that drives my work. My journey is
+            a testament to creativity, innovation, and a relentless pursuit of
+            excellence in every project.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2">
           <p className="text-lg text-muted-foreground text-left">
-            I am a passionate developer and designer with a keen eye for detail and a love for
-            creating beautiful, functional websites and applications. With years of experience in
-            the industry, I bring a unique blend of technical expertise and creative vision to every
+            I am a passionate developer and designer with a keen eye for detail
+            and a love for creating beautiful, functional websites and
+            applications. With years of experience in the industry, I bring a
+            unique blend of technical expertise and creative vision to every
             project.
           </p>
           <div className="space-y-4">
@@ -76,8 +83,9 @@ export default async function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Mastered Competencies</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore the diverse skill set that empowers my work. From cutting-edge technologies to
-            timeless design principles, these are the tools I use to bring ideas to life.
+            Explore the diverse skill set that empowers my work. From
+            cutting-edge technologies to timeless design principles, these are
+            the tools I use to bring ideas to life.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
@@ -94,8 +102,9 @@ export default async function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Showcasing Excellence</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore a curated selection of my best work. Each project represents a unique challenge
-            overcome and a creative solution delivered, demonstrating my versatility and expertise.
+            Explore a curated selection of my best work. Each project represents
+            a unique challenge overcome and a creative solution delivered,
+            demonstrating my versatility and expertise.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -113,8 +122,9 @@ export default async function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Professional Journey</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Dive into my career path and see how each role has contributed to my growth. My
-            experiences have shaped me into a versatile professional ready to tackle any challenge.
+            Dive into my career path and see how each role has contributed to my
+            growth. My experiences have shaped me into a versatile professional
+            ready to tackle any challenge.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -132,9 +142,9 @@ export default async function Portfolio() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Insights & Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Delve into my thoughts on industry trends, innovative technologies, and creative
-            processes. My blog is a window into my professional insights and continuous learning
-            journey.
+            Delve into my thoughts on industry trends, innovative technologies,
+            and creative processes. My blog is a window into my professional
+            insights and continuous learning journey.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
@@ -147,5 +157,5 @@ export default async function Portfolio() {
         </div>
       </section>
     </main>
-  )
+  );
 }

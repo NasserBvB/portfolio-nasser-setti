@@ -1,15 +1,15 @@
-import { Breadcrumb } from '@/components/breadcrumb'
-import BlogCard from '@/components/cards/blog'
-import { getBlogs } from '@/lib/data'
+import { Breadcrumb } from "../../../components/breadcrumb";
+import BlogCard from "../../../components/cards/blog";
+import { getBlogs } from "../../../lib/data";
 
 export default async function BlogsPage() {
-  const blogs = await getBlogs()
+  const blogs = await getBlogs();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog', href: '/blogs' },
+          { label: "Home", href: "/" },
+          { label: "Blog", href: "/blogs" },
         ]}
       />
       <h1 className="text-4xl font-bold mb-8">All Blog Posts</h1>
@@ -19,5 +19,5 @@ export default async function BlogsPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

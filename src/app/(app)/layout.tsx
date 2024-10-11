@@ -1,9 +1,9 @@
 import React from "react";
 import "./globals.scss";
 import { Inter } from "next/font/google";
-import Header from "@/components/Header";
-import { ThemeProvider } from "@/components/theme-provider";
-import Footer from "@/components/Footer";
+import Header from "../../components/Header";
+import { ThemeProvider } from "../../components/theme-provider";
+import Footer from "../../components/Footer";
 import { Metadata } from "next";
 
 const inter = Inter({

@@ -1,16 +1,16 @@
-import { Breadcrumb } from '@/components/breadcrumb'
-import ProjectCard from '@/components/cards/project'
-import { getProjects } from '@/lib/data'
+import { Breadcrumb } from "../../../components/breadcrumb";
+import ProjectCard from "../../../components/cards/project";
+import { getProjects } from "../../../lib/data";
 
 export default async function ProjectsPage() {
-  const projects = await getProjects()
+  const projects = await getProjects();
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Projects', href: '/projects' },
+          { label: "Home", href: "/" },
+          { label: "Projects", href: "/projects" },
         ]}
       />
       <h1 className="text-4xl font-bold mb-8">All Projects</h1>
@@ -20,5 +20,5 @@ export default async function ProjectsPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

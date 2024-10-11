@@ -1,21 +1,25 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Media, Project, Skill } from 'payload-types'
-import { Badge } from '../ui/badge'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
+import Image from "next/image";
+import Link from "next/link";
+import { Media, Project, Skill } from "payload-types";
+import { Badge } from "../ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const projectIcon = project.icon as Media
-  const icon = projectIcon
+  const projectIcon = project.icon as Media;
+  const icon = projectIcon;
   return (
     <Card key={project.id}>
       <CardHeader>
-        <CardTitle className="line-clamp-2">
-          {project.title}
-        </CardTitle>
+        <CardTitle className="line-clamp-2">{project.title}</CardTitle>
         <div className="flex gap-2">
           {(project.technologies as Skill[]).slice(0, 3).map((item) => {
-            return <Badge key={item.id}>{item.title}</Badge>
+            return <Badge key={item.id}>{item.title}</Badge>;
           })}
         </div>
       </CardHeader>
@@ -31,18 +35,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
             />
           </div>
         )}
-        <p className='line-clamp-4'>{project.excerpt}</p>
+        <p className="line-clamp-4">{project.excerpt}</p>
       </CardContent>
       <CardFooter>
         <div className="grow flex justify-between items-center">
-          <span className="font-bold text-lg text-muted-foreground">{project.company}</span>
-          <Link href={`/projects/${project.id}`} className="text-primary hover:underline">
+          <span className="font-bold text-lg text-muted-foreground">
+            {project.company}
+          </span>
+          <Link
+            href={`/projects/${project.id}`}
+            className="text-primary hover:underline"
+          >
             Explore More
           </Link>
         </div>
       </CardFooter>
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

@@ -1,28 +1,32 @@
-import { Breadcrumb } from '@/components/breadcrumb'
-import RichText from '@/components/RichText'
-import { getExperienceById, getExperiences } from '@/lib/data'
-import { notFound } from 'next/navigation'
+import { Breadcrumb } from "../../../../components/breadcrumb";
+import RichText from "../../../../components/RichText";
+import { getExperienceById, getExperiences } from "../../../../lib/data";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
-  const experiences = await getExperiences()
+  const experiences = await getExperiences();
   return experiences?.docs.map((experience) => ({
     id: String(experience.id),
-  }))
+  }));
 }
 
-export default async function ExperienceDetailPage({ params }: { params: { id: string } }) {
-  const experience = await getExperienceById(params.id)
+export default async function ExperienceDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const experience = await getExperienceById(params.id);
 
   if (!experience) {
-    notFound()
+    notFound();
   }
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Experiences', href: '/experiences' },
+          { label: "Home", href: "/" },
+          { label: "Experiences", href: "/experiences" },
           { label: experience.title!, href: `/experiences/${experience.id}` },
         ]}
       />
@@ -36,5 +40,5 @@ export default async function ExperienceDetailPage({ params }: { params: { id: s
       </div>
       <RichText content={experience.content} />
     </div>
-  )
+  );
 }
