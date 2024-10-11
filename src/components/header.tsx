@@ -1,76 +1,104 @@
-import Link from "next/link";
-import { cn } from "../utils";
+'use client'
 
-const Header = () => {
+import { Cross1Icon, HamburgerMenuIcon } from '@radix-ui/react-icons'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Dispatch, Fragment, SetStateAction, useState } from 'react'
+import { Button } from './ui/button'
+import { Separator } from './ui/separator'
+import { ModeToggle } from './theme-provider'
+
+const HeaderComponent = () => {
+  const [open, setOpen] = useState(false)
   return (
-    <header className="flex sticky top-0 z-20 bg-slate-300 dark:bg-slate-600 rounded-br-md rounded-bl-md">
-      <Links_elements
-        urls={[
-          {
-            label: "Home",
-            href: "/",
-          },
-          {
-            label: "Blogs",
-            href: "/blogs",
-          },
-          {
-            label: "About",
-            href: "/about",
-          },
-          {
-            label: "Contact",
-            href: "/contact",
-          },
-        ]}
-      />
+    <header className="flex-1 flex items-center justify-between gap-4 py-4">
+      <Link href="/">
+        <h1 className="text-4xl font-bold">Nasser Setti</h1>
+      </Link>
+
+      <div className="hidden sm:flex gap-4">
+        <Links
+          close={() => {
+            setOpen(false)
+          }}
+        />
+        <div>
+          <ModeToggle />
+        </div>
+      </div>
+      <div className="flex sm:hidden gap-4">
+        <Button
+          onClick={() => {
+            setOpen(true)
+          }}
+        >
+          <HamburgerMenuIcon />
+        </Button>
+      </div>
+      <MobileMenu open={open} setOpen={setOpen} />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
-
-const Links_elements = ({
-  urls,
-}: {
-  urls: { label: string; href: string }[];
-}) => {
+const Links = ({ close }: { close: () => void }) => {
   return (
-    <div className="flex items-center flex-wrap h-full flex-1">
-      {urls.map(({ label, href }, index) => (
-        <HeaderLink key={index} index={index} url={href} title={label} />
-      ))}
+    <Fragment>
+      <Link onClick={close} className="text-lg font-medium line-clamp-1" href="/projects">
+        Projects
+      </Link>
+      <Link onClick={close} className="text-lg font-medium line-clamp-1" href="/experiences">
+        Experiences
+      </Link>
+      <Link onClick={close} className="text-lg font-medium line-clamp-1" href="/blogs">
+        Blogs
+      </Link>
+    </Fragment>
+  )
+}
+
+const MobileMenu = ({
+  open,
+  setOpen,
+}: {
+  open: boolean
+  setOpen: Dispatch<SetStateAction<boolean>>
+}) => {
+  if (!open) return null
+  return (
+    <div className="z-10 flex sm:hidden flex-col gap-10 fixed top-0 left-0 h-screen w-full bg-white dark:bg-black py-4 px-4">
+      <div className="flex justify-between items-center">
+        <Link
+          href="/"
+          onClick={() => {
+            setOpen(false)
+          }}
+        >
+          <h1 className="text-4xl font-bold">Nasser Setti</h1>
+        </Link>
+        <Button
+          onClick={() => {
+            setOpen(false)
+          }}
+        >
+          <Cross1Icon />
+        </Button>
+      </div>
+      <Separator />
+      <div className="flex flex-col gap-4">
+        <Links
+          close={() => {
+            setOpen(false)
+          }}
+        />
+      </div>
+      <Separator />
+      <div className="flex justify-between items-center">
+        <h4>Switch theme</h4>
+        <ModeToggle />
+      </div>
+      <Button className="flex">Download CV</Button>
     </div>
-  );
-};
+  )
+}
 
-const HeaderLink = ({
-  index,
-  url,
-  title,
-}: {
-  index: number;
-  url: string;
-  title: string;
-}) => {
-  return (
-    <Link
-      title={title}
-      key={index}
-      prefetch={true}
-      href={url}
-      replace={true}
-      rev="canonical"
-      aria-description={title}
-      className={cn(
-        "cursor-pointer hover:bg-[#4A5A05] hover:dark:bg-green-700 hover:text-white",
-        "hover:shadow-sm hover:shadow-[#4A5A05] hover:dark:shadow-green-700",
-        "flex h-full gap-2 justify-center items-center px-2 py-1",
-        "rounded-b-md",
-        title === "Home" ? "mr-auto" : "mr-0"
-      )}
-    >
-      {title}
-    </Link>
-  );
-};
+export default HeaderComponent
