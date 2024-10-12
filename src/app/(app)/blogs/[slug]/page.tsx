@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "../../../../components/breadcrumb";
 import BlogCard from "../../../../components/cards/blog";
-import RichText from "../../../../components/RichText";
+import RichText from "../../../../components/richText";
 import { Separator } from "../../../../components/ui/separator";
 import { getBlogBySlug, getBlogs } from "../../../../lib/data";
 import { formatDate } from "../../../../lib/utils";

@@ -1,5 +1,5 @@
 import { Breadcrumb } from "../../../../components/breadcrumb";
-import RichText from "../../../../components/RichText";
+import RichText from "../../../../components/richText";
 import { getExperienceById, getExperiences } from "../../../../lib/data";
 import { notFound } from "next/navigation";
 
