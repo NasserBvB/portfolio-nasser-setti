@@ -3,7 +3,7 @@ import "./globals.scss";
 import { Inter } from "next/font/google";
 import Header from "../../components/header";
 import { ThemeProvider } from "../../components/theme-provider";
-import Footer from "@/components/footer";
+import Footer from "../../components/my-footer";
 import { Metadata } from "next";
 
 const inter = Inter({
