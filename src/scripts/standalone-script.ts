@@ -3,18 +3,17 @@
  * and uses the Payload Local API to query the database.
  */
 
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import { getPayload } from "payload";
+import config from "@payload-config";
 
 async function run() {
-  const payload = await getPayload({ config })
+  const payload = await getPayload({ config });
 
   const pages = await payload.find({
-    collection: 'blogs',
-  })
+    collection: "blogs",
+  });
 
-  console.log(pages)
-  process.exit(0)
+  process.exit(0);
 }
 
-await run()
+await run();

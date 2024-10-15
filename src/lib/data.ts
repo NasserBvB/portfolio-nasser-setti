@@ -28,8 +28,6 @@ export const getBlogBySlug = async (slug: string) => {
   })
 
   if (data.docs && data.docs.length > 0 && data.totalDocs > 0) {
-    console.log(data.docs.at(0)?.tags)
-
     const related = await payload.find({
       collection: 'blogs',
       where: {
