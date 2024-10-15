@@ -42,7 +42,7 @@
     "escape-html": "^1.0.3",
     "graphql": "^16.8.2",
     "lucide-react": "^0.447.0",
-    "next": "15.0.0-canary.104",
+    "next": "15.0.0-canary.191",
     "next-themes": "^0.3.0",
     "payload": "3.0.0-canary.0374de4",
     "prism-react-renderer": "^2.4.0",
