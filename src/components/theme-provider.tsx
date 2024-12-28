@@ -2,7 +2,7 @@
 
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes";
-import { type ThemeProviderProps } from "next-themes/dist/types";
+import { type ThemeProviderProps } from "next-themes";
 
 import { Button } from "../components/ui/button";
 import {
