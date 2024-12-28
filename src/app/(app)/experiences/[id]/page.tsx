@@ -13,9 +13,10 @@ export async function generateStaticParams() {
 export default async function ExperienceDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const experience = await getExperienceById(params.id);
+  const id = (await params).id;
+  const experience = await getExperienceById(id);
 
   if (!experience) {
     notFound();

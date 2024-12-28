@@ -13,9 +13,10 @@ export async function generateStaticParams() {
 export default async function ProjectDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>
 }) {
-  const project = await getProjectById(params.id);
+  const id = (await params).id;
+  const project = await getProjectById(id);
 
   if (!project) {
     notFound();
