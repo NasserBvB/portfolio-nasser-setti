@@ -14,6 +14,10 @@ import {
 const BlogCard = ({ blog }: { blog: Blog }) => {
   const blogThumbnail = blog.thumbnail as Media;
   const thumbnail = blogThumbnail;
+  console.log(process.env.NEXT_PUBLIC_SITE_URL);
+
+  // console.log(JSON.stringify(blog, null, 2));
+
   return (
     <Card key={blog.slug}>
       <CardHeader>

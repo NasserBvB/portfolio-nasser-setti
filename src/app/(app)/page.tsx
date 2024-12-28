@@ -39,7 +39,6 @@ export default async function Portfolio() {
             <Image
               width={400}
               height={400}
-              objectFit="contain"
               src="/nasser.jpg"
               alt="Hero Image"
               className="rounded-lg aspect-auto"
