@@ -42,3 +42,21 @@ export const beforeValidateBlog: CollectionBeforeValidateHook<any> = async ({
     data.slug = makeSlug(data.title);
     return data; // Return data to either create or update a document with
 };
+
+// export const SlateUploadConverter: SlateNodeConverter = {
+//   converter({  }) {
+//     return {
+//       fields: {
+//         ...slateNode.fields,
+//       },
+//       format: '',
+//       relationTo: slateNode.relationTo,
+//       type: 'upload',
+//       value: {
+//         id: slateNode.value?.id || '',
+//       },
+//       version: 1,
+//     } as const as SerializedUploadNode
+//   },
+//   nodeTypes: ['code'],
+// }

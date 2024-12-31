@@ -17,6 +17,9 @@ export default async function ProjectDetailPage({
 }) {
   const id = (await params).id;
   const project = await getProjectById(id);
+  console.log(
+    JSON.stringify(project, null, 2)
+  );
 
   if (!project) {
     notFound();
@@ -33,7 +36,7 @@ export default async function ProjectDetailPage({
       />
 
       <h2>{project.title}</h2>
-      <RichText content={project?.content} />
+      <RichText content={project?.content.root.children} />
     </div>
   );
 }

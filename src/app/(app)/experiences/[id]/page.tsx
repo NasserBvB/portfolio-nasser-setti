@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const experiences = await getExperiences();
-  return experiences?.docs.map((experience) => ({
+  return experiences?.docs?.map((experience) => ({
     id: String(experience.id),
   }));
 }
@@ -39,7 +39,7 @@ export default async function ExperienceDetailPage({
           {experience.start} - {experience.end}
         </p>
       </div>
-      <RichText content={experience.content} />
+      <RichText content={experience?.content.root.children} />
     </div>
   );
 }

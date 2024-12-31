@@ -52,7 +52,7 @@ export default async function BlogDetailPage({
               Last Modified {formatDate(blog.updatedAt)}
             </p>
           </div>
-          <RichText content={blog.content} />
+          <RichText content={blog?.content.root.children} />
         </div>
         <Separator className="hidden md:block grow-0" orientation="vertical" />
         {related.length > 0 && (

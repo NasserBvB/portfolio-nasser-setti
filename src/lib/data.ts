@@ -85,7 +85,7 @@ export const getExperiences = async (limit?: number) => {
 
 export const getExperienceById = async (id: string) => {
   const payload = await getPayload({ config })
-
+  
   const data = await payload.findByID({
     collection: 'experiences',
     id,
