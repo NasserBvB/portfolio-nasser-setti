@@ -26,9 +26,9 @@ const Code: React.FC<CodeFieldClientProps> = ({
       type: 'code',
       admin: {
         ...field.admin,
-        label,
+        label: label,
         language: languageKeyToMonacoLanguageMap[language as Ilanguage] || language,
-      },
+      } as CodeFieldClient['admin'],
     }),
     [field, language, label],
   )

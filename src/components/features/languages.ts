@@ -55,7 +55,8 @@ export const languageKeyToMonacoLanguageMap = {
     sql: 'sql',
     json: 'json',
     yaml: 'yaml',
-    xml: 'xml'
+    xml: 'xml',
+    dockerfile: 'dockerfile',
   }
 
 

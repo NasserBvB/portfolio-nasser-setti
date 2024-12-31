@@ -75,35 +75,35 @@ const serialize = (children: Children): React.ReactNode[] =>
           case 'h6':
             return <h6 key={i}>{serialize(node.children)}</h6>
         }
-        case "block":
-          switch (node.fields?.blockType) {
-            case "Code":
-              return <Highlight
-                  key={i}
-                  prism={Prism}
-                  theme={themes.nightOwl}
-                  code={node?.fields?.code || ""}
-                  language={node.fields?.language || "javascript"}
+      case "block":
+        switch (node.fields?.blockType) {
+          case "Code":
+            return <Highlight
+              key={i}
+              prism={Prism}
+              theme={themes.nightOwl}
+              code={node?.fields?.code || ""}
+              language={node.fields?.language || "javascript"}
+            >
+              {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre
+                  className={`${className} p-4 rounded-lg overflow-auto`}
+                  style={style}
                 >
-                  {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                    <pre
-                      className={`${className} p-4 rounded-lg overflow-auto`}
-                      style={style}
-                    >
-                      {tokens.map((line, i) => (
-                        <div {...getLineProps({ line, key: i })} key={i}>
-                          {line.map((token, key) => (
-                            <span {...getTokenProps({ token, key })} key={key} />
-                          ))}
-                        </div>
+                  {tokens.map((line, i) => (
+                    <div {...getLineProps({ line, key: i })} key={i}>
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} key={key} />
                       ))}
-                    </pre>
-                  )}
-                </Highlight>
-            default:
-              return <div key={i}>{serialize(node.children)}</div>
-          }
-          
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
+          default:
+            return <div key={i}>{serialize(node.children)}</div>
+        }
+
       case 'listitem':
         return <li key={i}>{serialize(node.children)}</li>
       case 'link':
@@ -130,8 +130,6 @@ const RichText: React.FC<{ className?: string; content: any }> = ({
   if (!content) {
     return null;
   }
-
-  console.log(content);
 
   return <div className={`editor-content container`}>{serialize(content)}</div>;
 };
