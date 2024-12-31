@@ -19,7 +19,7 @@ type Leaf = {
 }
 
 const serialize = (children: Children): React.ReactNode[] =>
-  children.map((node, i) => {
+  children?.map((node, i) => {
     if (Text.isText(node)) {
       let text = <span dangerouslySetInnerHTML={{ __html: escapeHTML(node.text) }} />
 
@@ -115,14 +115,12 @@ const serialize = (children: Children): React.ReactNode[] =>
   })
 
 const RichText: React.FC<{ className?: string; content: any }> = ({
-  className,
   content,
 }) => {
   if (!content) {
     return null;
   }
-
-  return <div className={className}>{serialize(content)}</div>;
+  return <div className={`editor-content container`}>{serialize(content)}</div>;
 };
 
 export default RichText;

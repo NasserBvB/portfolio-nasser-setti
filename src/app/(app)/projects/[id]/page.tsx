@@ -17,9 +17,6 @@ export default async function ProjectDetailPage({
 }) {
   const id = (await params).id;
   const project = await getProjectById(id);
-  console.log(
-    JSON.stringify(project, null, 2)
-  );
 
   if (!project) {
     notFound();

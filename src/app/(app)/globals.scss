@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -29,6 +30,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -56,113 +58,65 @@
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
 
-h1 {
-  margin: 40px 0;
-  font-size: 64px;
-  line-height: 70px;
-  font-weight: bold;
-}
+.editor-content {
+  @apply py-6 rounded-lg flex flex-col space-y-6;
 
-h2 {
-  margin: 28px 0;
-  font-size: 48px;
-  line-height: 54px;
-  font-weight: bold;
-}
-
-h3 {
-  margin: 24px 0;
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: bold;
-}
-
-h4 {
-  margin: 20px 0;
-  font-size: 26px;
-  line-height: 32px;
-  font-weight: bold;
-}
-
-h5 {
-  margin: 20px 0;
-  font-size: 22px;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-h6 {
-  margin: 20px 0;
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: bold;
-}
-
-label {
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-::selection {
-  background: var(--theme-success-500);
-  color: var(--color-base-800);
-}
-
-::-moz-selection {
-  background: var(--theme-success-500);
-  color: var(--color-base-800);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-p {
-  margin: var(--base) 0;
-}
-
-ul,
-ol {
-  padding-left: var(--base);
-  margin: 0 0 var(--base);
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-
-  &:focus {
-    opacity: 0.8;
-    outline: none;
+  h1 {
+    @apply text-xl font-bold mb-6 text-gray-800;
   }
 
-  &:active {
-    opacity: 0.7;
-    outline: none;
+  h2 {
+    @apply text-2xl font-semibold mb-4 text-gray-700;
   }
-}
 
-svg {
-  vertical-align: middle;
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  section {
+    @apply mb-8;
+  }
+
+  ul {
+    @apply list-disc pl-5 space-y-2 text-gray-600;
+
+    li span.feature-title {
+      @apply font-medium;
+    }
+  }
+
+  .tech-stack {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+
+    .tech-item {
+      @apply bg-gray-100 p-4 rounded-lg;
+
+      h3 {
+        @apply font-medium text-gray-700 mb-2;
+      }
+
+      p {
+        @apply text-gray-600;
+      }
+    }
+  }
+
+  .links {
+    a {
+      @apply text-blue-600 hover:underline block;
+    }
+  }
+  
 }
