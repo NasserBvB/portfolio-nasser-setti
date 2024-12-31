@@ -127,7 +127,7 @@ export default async function Portfolio() {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {experiences.docs.map((experience, index) => (
+          {experiences.docs.map((experience) => (
             <ExperienceCard experience={experience} key={experience.id} />
           ))}
         </div>

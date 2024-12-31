@@ -5,6 +5,8 @@ import Header from "../../components/header";
 import { ThemeProvider } from "../../components/theme-provider";
 import Footer from "../../components/my-footer";
 import { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +56,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

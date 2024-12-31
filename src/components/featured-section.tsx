@@ -18,7 +18,7 @@ interface Props {
   }
 }
 
-const FeaturedSection = ({ content, title, viewAll: { label = 'View All', link } }: Props) => {
+const FeaturedSection = ({ title, viewAll: { label = 'View All', link } }: Props) => {
   return (
     <section className="flex flex-col">
       <div className="flex justify-between items-center gap-3">

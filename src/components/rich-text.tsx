@@ -4,7 +4,7 @@ import escapeHTML from "escape-html";
 import { Highlight, themes, Prism } from "prism-react-renderer";
 import React, { Fragment } from "react";
 import { Text } from "slate";
-// eslint-disable-next-line no-use-before-define
+ 
 type Children = Leaf[];
 
 type Leaf = {

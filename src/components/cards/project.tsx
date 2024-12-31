@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Media, Project, Skill } from "payload-types";
+import { Media, Project, Skill } from "../../payload-types";
 import { Badge } from "../ui/badge";
 import {
   Card,

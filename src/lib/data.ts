@@ -18,7 +18,7 @@ export const getBlogs = async (limit?: number) => {
 }
 
 export const getBlogBySlug = async (slug: string) => {
-  const payload = await getPayload({ config })
+  const payload = await getPayload({ config})
 
   const data = await payload.find({
     collection: 'blogs',

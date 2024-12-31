@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Experience } from "payload-types";
+import { Experience } from "../../payload-types";
 import {
   Card,
   CardContent,
