@@ -12,6 +12,9 @@ type Leaf = {
   children: Children
   type: string
   url?: string
+  fields?: {
+    [key: string]: any
+  }
   value?: {
     alt: string
     url: string
@@ -84,29 +87,35 @@ const serialize = (children: Children): React.ReactNode[] =>
     switch (node.type) {
       case 'blockquote':
         return <blockquote key={i}>{serialize(node.children)}</blockquote>
-      case 'h1':
-        return <h1 key={i}>{serialize(node.children)}</h1>
-      case 'h2':
-        return <h2 key={i}>{serialize(node.children)}</h2>
-      case 'h3':
-        return <h3 key={i}>{serialize(node.children)}</h3>
-      case 'h4':
-        return <h4 key={i}>{serialize(node.children)}</h4>
-      case 'h5':
-        return <h5 key={i}>{serialize(node.children)}</h5>
-      case 'h6':
-        return <h6 key={i}>{serialize(node.children)}</h6>
-      case 'li':
+      case 'heading':
+        switch (node.tag) {
+          case 'h1':
+            return <h1 key={i}>{serialize(node.children)}</h1>
+          case 'h2':
+            return <h2 key={i}>{serialize(node.children)}</h2>
+          case 'h3':
+            return <h3 key={i}>{serialize(node.children)}</h3>
+          case 'h4':
+            return <h4 key={i}>{serialize(node.children)}</h4>
+          case 'h5':
+            return <h5 key={i}>{serialize(node.children)}</h5>
+          case 'h6':
+            return <h6 key={i}>{serialize(node.children)}</h6>
+        }
+      
+      case 'listitem':
         return <li key={i}>{serialize(node.children)}</li>
       case 'link':
         return (
-          <a href={escapeHTML(node.url)} key={i}>
+          <a href={escapeHTML(node?.fields?.url)} target={
+            node?.fields?.newTab ? '_blank' : '_self'
+          } key={i}>
             {serialize(node.children)}
           </a>
         )
       case 'ol':
         return <ol key={i}>{serialize(node.children)}</ol>
-      case 'ul':
+      case 'list':
         return <ul key={i}>{serialize(node.children)}</ul>
 
       default:
@@ -120,6 +129,9 @@ const RichText: React.FC<{ className?: string; content: any }> = ({
   if (!content) {
     return null;
   }
+
+  console.log(content);
+
   return <div className={`editor-content container`}>{serialize(content)}</div>;
 };
 

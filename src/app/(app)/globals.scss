@@ -61,7 +61,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border m-0 p-0;
   }
 
   body {
@@ -94,6 +94,7 @@
 
     li span.feature-title {
       @apply font-medium;
+
     }
   }
 
@@ -113,10 +114,8 @@
     }
   }
 
-  .links {
-    a {
-      @apply text-blue-600 hover:underline block;
-    }
+  a {
+    @apply text-blue-600 hover:underline block;
   }
-  
+
 }
