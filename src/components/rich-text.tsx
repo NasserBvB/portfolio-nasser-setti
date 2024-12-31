@@ -30,33 +30,6 @@ const serialize = (children: Children): React.ReactNode[] =>
         text = <strong key={i}>{text}</strong>
       }
 
-      if (node.code) {
-        text = (
-          <Highlight
-            key={i}
-            prism={Prism}
-            theme={themes.nightOwl}
-            code={node.text || ""}
-            language={node.type || "javascript"}
-          >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre
-                className={`${className} p-4 rounded-lg overflow-auto`}
-                style={style}
-              >
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })} key={i}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} key={key} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
-        );
-      }
-
       if (node.italic) {
         text = <em key={i}>{text}</em>
       }
@@ -102,7 +75,35 @@ const serialize = (children: Children): React.ReactNode[] =>
           case 'h6':
             return <h6 key={i}>{serialize(node.children)}</h6>
         }
-      
+        case "block":
+          switch (node.fields?.blockType) {
+            case "Code":
+              return <Highlight
+                  key={i}
+                  prism={Prism}
+                  theme={themes.nightOwl}
+                  code={node?.fields?.code || ""}
+                  language={node.fields?.language || "javascript"}
+                >
+                  {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                    <pre
+                      className={`${className} p-4 rounded-lg overflow-auto`}
+                      style={style}
+                    >
+                      {tokens.map((line, i) => (
+                        <div {...getLineProps({ line, key: i })} key={i}>
+                          {line.map((token, key) => (
+                            <span {...getTokenProps({ token, key })} key={key} />
+                          ))}
+                        </div>
+                      ))}
+                    </pre>
+                  )}
+                </Highlight>
+            default:
+              return <div key={i}>{serialize(node.children)}</div>
+          }
+          
       case 'listitem':
         return <li key={i}>{serialize(node.children)}</li>
       case 'link':

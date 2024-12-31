@@ -5,6 +5,7 @@ import RichText from "../../../../components/rich-text";
 import { Separator } from "../../../../components/ui/separator";
 import { getBlogBySlug, getBlogs } from "../../../../lib/data";
 import { formatDate } from "../../../../lib/utils";
+import { Fragment } from "react";
 
 export async function generateStaticParams() {
   const blogs = await getBlogs();
@@ -55,17 +56,34 @@ export default async function BlogDetailPage({
           <RichText content={blog?.content.root.children} />
         </div>
         <Separator className="hidden md:block grow-0" orientation="vertical" />
-        {related.length > 0 && (
-          <div className="w-full md:w-2/5 flex flex-col">
-            <h3>
-              Related Blogs{" "}
-              <span className="text-muted-foreground">({related.length})</span>
-            </h3>
-            {related.map((blog) => (
-              <BlogCard blog={blog} key={blog.slug} />
-            ))}
+
+        <div className="w-full md:w-2/5 flex flex-col">
+          <div className="flex flex-row gap-4 item-center flex-wrap">
+            {
+              blog.tags?.map((tag) => (
+                <a
+                  href={`https://www.google.com/search?q=${tag.title}`}
+                  key={tag.id} 
+                  className="px-2 py-1 rounded-md"
+                  target="_blank"
+                  >
+                  #{tag.title}
+                </a>
+              ))
+            }
           </div>
-        )}
+          {related.length > 0 && (
+            <Fragment>
+              <h3>
+                Related Blogs{" "}
+                <span className="text-muted-foreground">({related.length})</span>
+              </h3>
+              {related.map((blog) => (
+                <BlogCard blog={blog} key={blog.slug} />
+              ))}
+            </Fragment>
+          )}
+        </div>
       </div>
     </div>
   );

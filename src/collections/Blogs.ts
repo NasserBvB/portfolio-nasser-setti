@@ -1,5 +1,6 @@
+import { languages } from '@/components/features/languages'
 import { afterOperationHookProjects, beforeValidateBlog } from '@/helpers'
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { lexicalEditor, BlocksFeature } from '@payloadcms/richtext-lexical'
 import { SlateToLexicalFeature } from '@payloadcms/richtext-lexical/migrate'
 import type { CollectionConfig } from 'payload'
 
@@ -68,8 +69,39 @@ export const Blogs: CollectionConfig = {
       editor: lexicalEditor({
         features: ({ defaultFeatures }) => [
           ...defaultFeatures,
-          SlateToLexicalFeature({})],
+          SlateToLexicalFeature({}),
+          BlocksFeature({
+            blocks: [
+              {
+                slug: 'Code',
+                fields: [
+                  {
+                    type: 'select',
+                    name: 'language',
+                    options: Object.entries(languages).map(([key, value]) => ({
+                      label: value,
+                      value: key,
+                    })),
+                    defaultValue: 'ts',
+                  },
+                  {
+                    admin: {
+                      components: {
+                        Field: '../components/features/code-component',
+                      },
+                      
+                    },
+                    name: 'code',
+                    type: 'code',
+                  },
+                ],
+              }
+            ],
+            inlineBlocks: [],
+          }),
+        ],
       }),
+
       required: true,
     },
   ],
