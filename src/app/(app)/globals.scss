@@ -71,51 +71,241 @@
 
 
 .editor-content {
-  @apply py-6 rounded-lg flex flex-col space-y-6;
+  @apply py-8 rounded-lg flex flex-col space-y-6 max-w-4xl mx-auto;
+
+  /* Headings with anchor links */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply scroll-mt-20 relative;
+
+    &:hover::before {
+      @apply opacity-100;
+    }
+
+    &::before {
+      content: "#";
+      @apply absolute -left-5 opacity-0 text-primary/50 transition-opacity cursor-pointer;
+    }
+  }
 
   h1 {
-    @apply text-xl font-bold mb-6 ;
+    @apply text-3xl font-bold mb-6 border-b pb-2 border-border;
   }
 
   h2 {
-    @apply text-2xl font-semibold mb-4 ;
+    @apply text-2xl font-semibold mb-5 text-primary/90;
   }
 
   h3 {
-    @apply text-lg font-semibold mb-4 ;
+    @apply text-xl font-semibold mb-4 text-primary/80;
   }
 
   h4 {
-    @apply text-base font-semibold mb-4 ;
+    @apply text-lg font-semibold mb-4;
   }
 
   h5 {
-    @apply text-sm font-semibold mb-4 ;
+    @apply text-base font-semibold mb-3;
   }
 
   h6 {
-    @apply text-xs font-semibold mb-4 ;
+    @apply text-sm font-semibold mb-3;
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-base mb-6 text-foreground/90;
+
+    /* Add drop cap to first paragraph after headings */
+    h1+&,
+    h2+&,
+    h3+& {
+      &:first-letter {
+        @apply text-3xl font-semibold text-primary float-left mr-2 mt-1;
+      }
+    }
   }
 
   section {
-    @apply mb-8;
+    @apply mb-10 p-6 bg-secondary/20 rounded-lg border border-secondary/30 shadow-sm;
   }
 
   ul {
-    @apply list-disc pl-5 space-y-2;
+    @apply list-disc pl-6 space-y-2 mb-6;
 
-    li span.feature-title {
-      @apply font-medium;
+    li {
+      @apply pl-2;
 
+      span.feature-title {
+        @apply font-medium text-primary;
+      }
+
+      &::marker {
+        @apply text-primary/70;
+      }
+    }
+  }
+
+  ol {
+    @apply list-decimal pl-6 space-y-2 mb-6;
+
+    li {
+      @apply pl-2;
+
+      &::marker {
+        @apply text-primary/70 font-medium;
+      }
     }
   }
 
   a {
-    @apply text-blue-600 hover:underline block;
+    @apply text-primary hover:underline inline-block font-medium transition-colors;
+
+    &:hover {
+      @apply text-primary/80;
+    }
+
+    &:focus-visible {
+      @apply outline-none ring-2 ring-primary/50 ring-offset-2;
+    }
   }
 
+  blockquote {
+    @apply pl-4 border-l-4 border-primary/30 italic my-6 text-muted-foreground;
+
+    p {
+      @apply mb-2;
+    }
+
+    cite {
+      @apply block text-right text-sm not-italic mt-2;
+    }
+  }
+
+  pre {
+    @apply my-6 rounded-lg overflow-auto bg-secondary/30 p-4 text-sm;
+
+    code {
+      @apply font-mono;
+    }
+  }
+
+  img {
+    @apply rounded-lg my-6 mx-auto max-w-full h-auto shadow-md transition-all duration-300;
+
+    &:hover {
+      @apply shadow-lg scale-[1.01];
+    }
+  }
+
+  hr {
+    @apply my-8 border-t border-border relative;
+
+    &::before {
+      content: "•";
+      @apply absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-4 text-primary/50;
+    }
+  }
+
+  table {
+    @apply w-full border-collapse my-6 shadow-sm;
+
+    caption {
+      @apply text-sm text-muted-foreground mb-2;
+    }
+
+    th {
+      @apply bg-secondary/50 text-left p-3 font-semibold border border-border;
+    }
+
+    td {
+      @apply p-3 border border-border;
+    }
+
+    tr:nth-child(even) {
+      @apply bg-secondary/20;
+    }
+
+    tr:hover {
+      @apply bg-secondary/30 transition-colors;
+    }
+  }
+
+  /* Code blocks styling */
+  :not(pre)>code {
+    @apply bg-secondary/30 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  /* Table of contents styling */
+  .table-of-contents {
+    @apply bg-secondary/20 rounded-lg p-4 mb-8 border border-secondary/30 sticky top-20;
+
+    h4 {
+      @apply text-lg font-medium mb-3;
+    }
+
+    ul {
+      @apply space-y-1 list-none pl-0;
+
+      li {
+        @apply text-sm;
+
+        a {
+          @apply text-foreground hover:text-primary transition-colors;
+        }
+
+        &.level-3 {
+          @apply ml-4;
+        }
+      }
+    }
+  }
+
+  /* Callout boxes */
+  .callout {
+    @apply p-4 rounded-lg my-6 border-l-4 flex items-start gap-3;
+
+    &.info {
+      @apply bg-blue-500/10 border-blue-500;
+
+      .callout-icon {
+        @apply text-blue-500;
+      }
+    }
+
+    &.warning {
+      @apply bg-amber-500/10 border-amber-500;
+
+      .callout-icon {
+        @apply text-amber-500;
+      }
+    }
+
+    &.error {
+      @apply bg-red-500/10 border-red-500;
+
+      .callout-icon {
+        @apply text-red-500;
+      }
+    }
+
+    &.success {
+      @apply bg-green-500/10 border-green-500;
+
+      .callout-icon {
+        @apply text-green-500;
+      }
+    }
+
+    .callout-content {
+      @apply flex-1;
+
+      p:last-child {
+        @apply mb-0;
+      }
+    }
+  }
 }

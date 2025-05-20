@@ -13,7 +13,6 @@ export const makeSlug = (title: string): string => {
 export const afterOperationHookProjects: CollectionAfterOperationHook = async ({
     args, // arguments passed into the operation
     operation, // name of the operation
-    req, // full express request
     result, // the result of the operation, before modifications
 }) => {
     switch (operation) {
@@ -32,31 +31,10 @@ export const afterOperationHookProjects: CollectionAfterOperationHook = async ({
     return result; // return modified result as necessary
 };
 
-export const beforeValidateBlog: CollectionBeforeValidateHook<any> = async ({
+export const beforeValidateBlog: CollectionBeforeValidateHook<{ id: number; title?: string; slug?: string }> = async ({
     data, // incoming data to update or create with
-    req, // full express request
-    operation, // name of the operation ie. 'create', 'update'
-    originalDoc, // original document
 }) => {
     if (!data?.title) return data;
     data.slug = makeSlug(data.title);
     return data; // Return data to either create or update a document with
 };
-
-// export const SlateUploadConverter: SlateNodeConverter = {
-//   converter({  }) {
-//     return {
-//       fields: {
-//         ...slateNode.fields,
-//       },
-//       format: '',
-//       relationTo: slateNode.relationTo,
-//       type: 'upload',
-//       value: {
-//         id: slateNode.value?.id || '',
-//       },
-//       version: 1,
-//     } as const as SerializedUploadNode
-//   },
-//   nodeTypes: ['code'],
-// }

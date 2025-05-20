@@ -13,7 +13,7 @@ export default async function ExperiencesPage() {
         ]}
       />
       <h1 className="text-4xl font-bold mb-8">All Experiences</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {experiences.docs.map((experience) => (
           <ExperienceCard experience={experience} key={experience.id} />
         ))}

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getBlogs, getExperiences, getProjects } from "../lib/data";
 
+// Base URL for the website - update this to your actual domain
 const baseUrl = "https://snasser.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -22,14 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return {
       url: baseUrl + `/blogs/${blog.slug}`,
-      lastModified: new Date(blog.updatedAt).toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: new Date(blog.updatedAt),
       changeFrequency: "monthly",
       priority: 0.8,
     } as MetadataRoute.Sitemap[0];
@@ -44,14 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
     return {
       url: baseUrl + `/projects/${project.id}`,
-      lastModified: new Date(project.updatedAt).toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: new Date(project.updatedAt),
       changeFrequency: "monthly",
       priority: 0.5,
     } as MetadataRoute.Sitemap[0];
@@ -69,14 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return {
       url: baseUrl + `/experiences/${experience.id}`,
-      lastModified: new Date(experience.updatedAt).toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: new Date(experience.updatedAt),
       changeFrequency: "monthly",
       priority: 0.5,
     } as MetadataRoute.Sitemap[0];
@@ -91,41 +71,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: baseUrl + "/blogs",
-      // format it to be in DD/MM/YYYY HH:MM
-      lastModified: lastModifiedBlogsDate.toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: lastModifiedBlogsDate,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: baseUrl + "/projects",
-      lastModified: lastModifiedProjectsDate.toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: lastModifiedProjectsDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: baseUrl + "/experiences",
-      lastModified: lastModifiedExperiencesDate.toLocaleString("en-GB", {
-        timeZone: "UTC",
-        day: "2-digit",
-        month: "2-digit",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
+      lastModified: lastModifiedExperiencesDate,
       changeFrequency: "monthly",
       priority: 0.5,
     },

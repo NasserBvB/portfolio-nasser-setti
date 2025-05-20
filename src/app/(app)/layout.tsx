@@ -7,32 +7,14 @@ import Footer from "../../components/my-footer";
 import { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { defaultMetadata } from "../../lib/metadata";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Portfolio | Nasser S. Portfolio",
-  description:
-    "Explore my portfolio to discover my professional journey, featured projects, mastered competencies, and insights on industry trends.",
-  keywords: "portfolio, projects, experiences, blogs, skills",
-  icons: [
-    {
-      rel: "icon",
-      type: "image/jpeg",
-      sizes: "32x32",
-      url: "/nasser.jpg",
-    },
-    {
-      rel: "icon",
-      type: "image/jpeg",
-      sizes: "16x16",
-      url: "/nasser.jpg",
-    },
-  ],
-};
+export const metadata: Metadata = defaultMetadata;
 
 /* Our app sits here to not cause any conflicts with payload's root layout  */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -46,6 +28,25 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           padding: "0rem 1rem !important",
         }}
       >
+        {/* JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Nasser Setti",
+              url: "https://snasser.dev",
+              jobTitle: "Full-Stack Developer & Digital Architect",
+              sameAs: [
+                "https://github.com/nasserbvb",
+                "https://www.linkedin.com/in/nasser-setti/",
+                "https://x.com/NBvBJS"
+              ],
+              knowsAbout: ["Web Development", "Software Architecture", "Full-Stack Development"]
+            })
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
