@@ -6,7 +6,7 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
-
+import { resendAdapter } from '@payloadcms/email-resend'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Skills } from './collections/Skills'
@@ -85,4 +85,9 @@ export default buildConfig({
       token: process.env.BLOB_READ_WRITE_TOKEN,
     }),
   ],
+  email: resendAdapter({
+    defaultFromAddress: 'do-not-reply@snasser.dev',
+    defaultFromName: 'Snasser.dev',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
 })
