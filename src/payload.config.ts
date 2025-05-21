@@ -87,7 +87,7 @@ export default buildConfig({
   ],
   email: resendAdapter({
     defaultFromAddress: 'do-not-reply@snasser.dev',
-    defaultFromName: 'Snasser.dev',
+    defaultFromName: 'Abdennasser ES-SATI',
     apiKey: process.env.RESEND_API_KEY || '',
   }),
 })
