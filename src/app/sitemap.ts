@@ -4,6 +4,12 @@ import { getBlogs, getExperiences, getProjects } from "../lib/data";
 // Base URL for the website - update this to your actual domain
 const baseUrl = "https://snasser.dev";
 
+// Helper function to format date to ISO 8601 format (YYYY-MM-DD)
+function formatDateToISO(date: Date | string): string {
+  const d = new Date(date);
+  return d.toISOString().split('T')[0];
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [blogs, projects, experiences] = await Promise.all([
     getBlogs(),
@@ -23,7 +29,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return {
       url: baseUrl + `/blogs/${blog.slug}`,
-      lastModified: new Date(blog.updatedAt),
+      lastModified: formatDateToISO(blog.updatedAt),
       changeFrequency: "monthly",
       priority: 0.8,
     } as MetadataRoute.Sitemap[0];
@@ -38,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
     return {
       url: baseUrl + `/projects/${project.id}`,
-      lastModified: new Date(project.updatedAt),
+      lastModified: formatDateToISO(project.updatedAt),
       changeFrequency: "monthly",
       priority: 0.5,
     } as MetadataRoute.Sitemap[0];
@@ -56,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return {
       url: baseUrl + `/experiences/${experience.id}`,
-      lastModified: new Date(experience.updatedAt),
+      lastModified: formatDateToISO(experience.updatedAt),
       changeFrequency: "monthly",
       priority: 0.5,
     } as MetadataRoute.Sitemap[0];
@@ -65,25 +71,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: formatDateToISO(new Date()),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
       url: baseUrl + "/blogs",
-      lastModified: lastModifiedBlogsDate,
+      lastModified: formatDateToISO(lastModifiedBlogsDate),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: baseUrl + "/projects",
-      lastModified: lastModifiedProjectsDate,
+      lastModified: formatDateToISO(lastModifiedProjectsDate),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: baseUrl + "/experiences",
-      lastModified: lastModifiedExperiencesDate,
+      lastModified: formatDateToISO(lastModifiedExperiencesDate),
       changeFrequency: "monthly",
       priority: 0.5,
     },
